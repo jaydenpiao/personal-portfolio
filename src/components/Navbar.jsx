@@ -18,27 +18,27 @@ const Navbar = () => {
         {/* menu */}
         <ul className='hidden md:flex'>
             <li>
-                <Link to="home" smooth={true} duration={500}>
+                <Link to="home" smooth={true} duration={500} className='glow-on-hover'>
                     Home
                 </Link>
             </li>
             <li>
-                <Link to="about" smooth={true} duration={500}>
+                <Link to="about" smooth={true} duration={500} className='glow-on-hover'>
                     About
                 </Link>
             </li>
             <li>
-                <Link to="skills" smooth={true} duration={500}>
+                <Link to="skills" smooth={true} duration={500} className='glow-on-hover'>
                     Skills
                 </Link>
             </li>
             <li>
-                <Link to="projects" smooth={true} duration={500}>
+                <Link to="projects" smooth={true} duration={500} className='glow-on-hover'>
                     Projects
                 </Link>
             </li>
             <li>
-                <Link to="contact" smooth={true} duration={500}>
+                <Link to="contact" smooth={true} duration={500} className='glow-on-hover'>
                     Contact
                 </Link>
             </li>

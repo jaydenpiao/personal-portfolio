@@ -28,3 +28,11 @@
         hsla(242, 74%, 61%, 0.8)
     )!important;
 }
+
+.glow-on-hover {
+    transition: text-shadow 0.5s ease-in-out;
+}
+
+.glow-on-hover:hover {
+    text-shadow: 0 0 10px #03fa6e, 0 0 20px #03fa6e;
+}
