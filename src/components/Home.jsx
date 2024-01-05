@@ -1,6 +1,7 @@
 import React from 'react'
 import {HiArrowNarrowRight} from 'react-icons/hi'
 import { Link } from 'react-scroll'
+import { TypeAnimation } from 'react-type-animation'
 
 const Home = () => {
   return (
@@ -9,7 +10,21 @@ const Home = () => {
         <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
             <p className='text-[#03fa6e]'>Hi, my name is</p>
             <h1 className='text-4xl sm:text-7xl font-bold text-[#ccd6f6]'>Jayden Piao</h1>
-            <h2 className='text-4xl sm:text-7xl font-bold text-[#8892b0]'>I'm a Full Stack Developer</h2>
+            <h2 className='text-4xl sm:text-7xl font-bold text-[#8892b0]'>
+                <TypeAnimation
+                    sequence={[
+                        "I'm a Junior at UBC",
+                        1500,
+                        "I'm a Software Engineer",
+                        1500,
+                        "I'm a Music Lover",
+                        1500,
+                        "I'm a Poker Player",
+                        1500
+                    ]}
+                    repeat={Infinity}
+                />
+            </h2>
             <p className='text-[#8892b0] py-4 max-w-[700px]'>
                 I'm a third year Mathematics student at UBC who is an 
                 aspiring software engineer. I specialize in full stack 
