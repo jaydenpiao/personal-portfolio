@@ -31,7 +31,7 @@ const Home = () => {
                 development with an interest in data science.
             </p>
             <div>
-                <button className='group text-white border-2 px-6 py-3 my-2 flex items-center hover:bg-[#03fa6e] hover:border-[#03fa6e]'>
+                <button className='group text-white border-2 px-6 py-3 my-2 flex items-center hover:bg-[#03fa6e] hover:border-[#03fa6e] transition ease-in-out duration-500 rounded-md'>
                 <Link to="projects" smooth={true} duration={500}>
                     View Projects
                 </Link> 
