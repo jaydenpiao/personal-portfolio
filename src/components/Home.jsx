@@ -26,9 +26,10 @@ const Home = () => {
                 />
             </h2>
             <p className='text-[#8892b0] py-4 max-w-[700px]'>
-                I'm a third year Mathematics student at UBC who is an 
-                aspiring software engineer. I specialize in full stack 
-                development with an interest in data science.
+                Currently in my third year studying mathematics at the University of British 
+                Columbia, I am actively exploring opportunities in software engineering. My 
+                aim is to develop my technical skills further and make a positive impact on the 
+                community.
             </p>
             <div>
                 <button className='group text-white border-2 px-6 py-3 my-2 flex items-center hover:bg-[#03fa6e] hover:border-[#03fa6e] transition ease-in-out duration-500 rounded-md'>
