@@ -10,36 +10,36 @@ const Navbar = () => {
     const handleClick = () => setNav(!nav)
 
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#2b5798] text-gray-300">
+    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-white">
        
         <Link to="home" smooth={true} duration={500}>
-            <img src={Logo} alt="Logo Image" style={{width: "100px", cursor: "pointer"}}/>
+            <h1 className='font-bold text-xl underline cursor-pointer pl-3'>JP.</h1>
         </Link>
 
         {/* menu */}
         <ul className='hidden md:flex font-semibold'>
             <li>
-                <Link to="home" smooth={true} duration={500} className='glow-on-hover'>
+                <Link to="home" smooth={true} duration={500} className='hover:underline'>
                     Home
                 </Link>
             </li>
             <li>
-                <Link to="about" smooth={true} duration={500} className='glow-on-hover'>
+                <Link to="about" smooth={true} duration={500} className='hover:underline'>
                     About
                 </Link>
             </li>
             <li>
-                <Link to="skills" smooth={true} duration={500} className='glow-on-hover'>
+                <Link to="skills" smooth={true} duration={500} className='hover:underline'>
                     Skills
                 </Link>
             </li>
             <li>
-                <Link to="projects" smooth={true} duration={500} className='glow-on-hover'>
+                <Link to="projects" smooth={true} duration={500} className='hover:underline'>
                     Projects
                 </Link>
             </li>
             <li>
-                <Link to="contact" smooth={true} duration={500} className='glow-on-hover'>
+                <Link to="contact" smooth={true} duration={500} className='hover:underline'>
                     Contact
                 </Link>
             </li>

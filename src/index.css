@@ -34,7 +34,7 @@
 }
 
 .glow-on-hover:hover {
-    text-shadow: 0 0 10px #03fa6e, 0 0 20px #03fa6e;
+    text-shadow: 0 0 10px #4171ff, 0 0 20px #4171ff;
 }
 
 @keyframes wave-animation {

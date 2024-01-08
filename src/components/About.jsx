@@ -1,20 +1,21 @@
 import React from 'react'
+import headshot from '../assets/headshot.jpeg'
 
 const About = () => {
     return (
-      <div name='about' className='w-full h-screen bg-[#2b5798] text-gray-300'>
+      <div name='about' className='w-full h-screen bg-white'>
         <div className='flex flex-col justify-center items-center w-full h-full'>
           <div className='max-w-[1000px] w-full grid grid-cols-2 gap-8'>
             <div className='sm:text-right pb-8 pl-4'>
-              <p className='text-4xl font-bold inline border-b-4 border-[#03fa6e]'>
+              <p className='text-4xl font-bold inline border-b-4 border-[#4171ff]'>
                 About
               </p>
             </div>
-            <div></div>
+            
             </div>
             <div className='max-w-[1300px] w-full grid sm:grid-cols-2 gap-8 px-4'>
-              <div className='sm:text-right text-3xl font-bold'>
-                <p>Hey! I'm Jayden Piao, nice to meet you. Please take a look around!</p>
+              <div className='justify-end flex'>
+                <img src={headshot} className='w-[400px] h-[400px] object-cover rounded-lg'></img>
               </div>
               <div>
                 <p className='text-xl font-semibold'>
