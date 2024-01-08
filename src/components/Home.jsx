@@ -2,37 +2,46 @@ import React from 'react'
 import {HiArrowNarrowRight} from 'react-icons/hi'
 import { Link } from 'react-scroll'
 import { TypeAnimation } from 'react-type-animation'
+import { m } from 'framer-motion'
+
 
 const Home = () => {
   return (
-    <div name='home' className='w-full h-screen bg-[#0a192f]'>
+    <div name='home' className='w-full h-screen bg-white'>
         {/* container */}
         <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
-            <p className='text-[#03fa6e]'>Hi, my name is</p>
-            <h1 className='text-4xl sm:text-7xl font-bold text-[#ccd6f6]'>Jayden Piao</h1>
-            <h2 className='text-4xl sm:text-7xl font-bold text-[#8892b0]'>
+            <h1 className='text-4xl sm:text-7xl font-bold pb-5'>
+                <span>Hi </span>
+                <span className='home-emoji'>👋</span>
+                <span>, I'm Jayden Piao</span>
+            </h1>
+            <h2 className='text-4xl sm:text-6xl font-bold text-[#4171ff]'>
                 <TypeAnimation
                     sequence={[
-                        "I'm a Junior at UBC",
+                        "a Junior at UBC",
                         1500,
-                        "I'm a Software Engineer",
+                        "a Software Engineer",
                         1500,
-                        "I'm a Music Lover",
+                        "a Music Lover",
                         1500,
-                        "I'm a Poker Player",
+                        "a Poker Player",
+                        1500,
+                        "a Car Enthusiast",
+                        1500,
+                        "a Sports Fanatic",
                         1500
                     ]}
                     repeat={Infinity}
                 />
             </h2>
-            <p className='text-[#8892b0] py-4 max-w-[700px]'>
+            <p className='text-[#8892b0] py-4 max-w-[700px] font-medium'>
                 Currently in my third year studying mathematics at the University of British 
                 Columbia, I am actively exploring opportunities in software engineering. My 
                 aim is to develop my technical skills further and make a positive impact on the 
                 community.
             </p>
             <div>
-                <button className='group text-white border-2 px-6 py-3 my-2 flex items-center hover:bg-[#03fa6e] hover:border-[#03fa6e] transition ease-in-out duration-500 rounded-md'>
+                <button className='font-semibold group text-white border-2 px-6 py-3 my-2 flex items-center hover:bg-[#03fa6e] hover:border-[#03fa6e] transition ease-in-out duration-500 rounded-md'>
                 <Link to="projects" smooth={true} duration={500}>
                     View Projects
                 </Link> 
