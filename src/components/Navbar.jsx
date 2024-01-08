@@ -10,7 +10,7 @@ const Navbar = () => {
     const handleClick = () => setNav(!nav)
 
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-white">
+    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-white z-50">
        
         <Link to="home" smooth={true} duration={500}>
             <h1 className='font-bold text-xl underline cursor-pointer pl-3'>JP.</h1>

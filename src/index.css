@@ -24,9 +24,10 @@
 .content-div:hover {
     background-image: linear-gradient(
         to right,
-        rgba(112, 157, 255, 0.8),
-        hsla(242, 74%, 61%, 0.8)
+        rgba(255, 255, 255, 0.8),
+        hsla(224, 100%, 62%, 0.8)
     )!important;
+    transition: background-image 2s;
 }
 
 .glow-on-hover {
@@ -70,4 +71,12 @@
     animation-iteration-count: infinite;
     transform-origin: 70% 70%;
     display: inline-block;
+}
+
+.square-container {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    background-size: cover;
+    background-position: center;
 }
