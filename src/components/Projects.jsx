@@ -7,7 +7,7 @@ import u4ea from '../assets/projects/u4ea.png'
 import poker from '../assets/projects/ubcpoker.png'
 import python from '../assets/skills/python.png'
 import javascript from '../assets/skills/javascript.png'
-import flask from '../assets/skills/javascript.png'
+import java from '../assets/skills/java.png'
 import node from '../assets/skills/node.png'
 import express from '../assets/skills/express.png'
 import mongodb from '../assets/skills/mongo.png'
@@ -16,6 +16,10 @@ import tailwind from '../assets/skills/tailwind.png'
 import vite from '../assets/skills/vite.png'
 import openai from '../assets/skills/openai.png'
 import ts from '../assets/skills/ts.png'
+import html from '../assets/skills/html.png'
+import css from '../assets/skills/css.png'
+import tensorflow from '../assets/skills/tensorflow.png'
+import figma from '../assets/skills/figma.png'
 
 
 const Projects = () => {
@@ -46,7 +50,7 @@ const Projects = () => {
                                 <img className='w-8 ml-1' src={javascript}></img>
                             </span>
                             <span>
-                                <img className='w-8 ml-1 mt-2' src={express}></img>
+                                <img className='w-8' src={figma}></img>
                             </span>
                         </div>
                         <div className='pt-4 text-center'>
@@ -152,7 +156,25 @@ const Projects = () => {
                         <span className='text-2xl font-bold text-white tracking-wider'>
                             UBC Poker Club
                         </span>
-                        <div className='pt-8 text-center'>
+                        <div className='pt-4 flex'>
+                            <span>
+                                <img className='w-8 ml-1' src={react}></img>
+                            </span>
+                            <span>
+                                <img className='w-8' src={html}></img>
+                            </span>
+                            <span>
+                                <img className='w-8 ml-1' src={css}></img>
+                            </span>
+                            <span>
+                                <img className='w-8 ml-1' src={javascript}></img>
+                            </span>
+                            
+                            <span>
+                                <img className='w-8 ml-1' src={tailwind}></img>
+                            </span>
+                        </div>
+                        <div className='pt-4 text-center'>
                             <a href='https://ubcpokerclub.com/' target='_blank' rel='noopener noreferrer'>
                                 <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Website</button>
                             </a>       
@@ -171,7 +193,22 @@ const Projects = () => {
                         <span className='text-2xl font-bold text-white tracking-wider'>
                             Sign Language Translator
                         </span>
-                        <div className='pt-8 text-center'>
+                        <div className='pt-4 flex'>
+                            <span>
+                                <img className='w-8' src={html}></img>
+                            </span>
+                            <span>
+                                <img className='w-8 ml-1' src={css}></img>
+                            </span>
+                            <span>
+                                <img className='w-8 ml-1' src={javascript}></img>
+                            </span>
+                            
+                            <span>
+                                <img className='w-7 ml-1' src={tensorflow}></img>
+                            </span>
+                        </div>
+                        <div className='pt-4 text-center'>
                             <a href='https://sign-language-translator.netlify.app/' target='_blank' rel='noopener noreferrer'>
                                 <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Website</button>
                             </a>       
@@ -190,7 +227,12 @@ const Projects = () => {
                         <span className='text-2xl font-bold text-white tracking-wider'>
                             ATM
                         </span>
-                        <div className='pt-8 text-center'>
+                        <div className='pt-4 flex'>
+                            <span>
+                                <img className='w-8' src={java}></img>
+                            </span>
+                        </div>
+                        <div className='pt-4 text-center'>
                             {/* <a href='/'>
                                 <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Instagram</button>
                             </a>        */}
