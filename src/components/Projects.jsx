@@ -55,10 +55,10 @@ const Projects = () => {
                         </div>
                         <div className='pt-4 text-center'>
                             <a href='https://www.instagram.com/albumnutrition' target='_blank' rel='noopener noreferrer'>
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Instagram</button>
+                                <button className='border-2 text-center rounded-md px-4 py-3 m-2 bg-white text-gray-700 font-semibold text-lg hover:border-[#4171ff] transition ease-in-out duration-500'>Instagram</button>
                             </a>       
                             <a href='https://github.com/jaydenpiao/albumnutrition' target='_blank' rel='noopener noreferrer'>
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Code</button>
+                                <button className='border-2 text-center rounded-md px-4 py-3 m-2 bg-white text-gray-700 font-semibold text-lg hover:border-[#4171ff] transition ease-in-out duration-500'>Code</button>
                             </a>                   
                         </div>
                     </div>
@@ -97,10 +97,10 @@ const Projects = () => {
                         </div>
                         <div className='pt-4 text-center'>
                             <a href='https://u4ea.onrender.com/' target='_blank' rel='noopener noreferrer'>
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Website</button>
+                                <button className='border-2 text-center rounded-md px-4 py-3 m-2 bg-white text-gray-700 font-semibold text-lg hover:border-[#4171ff] transition ease-in-out duration-500'>Website</button>
                             </a>       
                             <a href='https://github.com/jaydenpiao/tailwind-u4ea' target='_blank' rel='noopener noreferrer'>
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Code</button>
+                                <button className='border-2 text-center rounded-md px-4 py-3 m-2 bg-white text-gray-700 font-semibold text-lg hover:border-[#4171ff] transition ease-in-out duration-500'>Code</button>
                             </a>                   
                         </div>
                     </div>
@@ -142,7 +142,7 @@ const Projects = () => {
                                 <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Instagram</button>
                             </a>        */}
                             <a href='https://github.com/jaydenpiao/chatgpt_clone' target='_blank' rel='noopener noreferrer'>
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Code</button>
+                                <button className='border-2 text-center rounded-md px-4 py-3 m-2 bg-white text-gray-700 font-semibold text-lg hover:border-[#4171ff] transition ease-in-out duration-500'>Code</button>
                             </a>                   
                         </div>
                     </div>
@@ -176,10 +176,10 @@ const Projects = () => {
                         </div>
                         <div className='pt-4 text-center'>
                             <a href='https://ubcpokerclub.com/' target='_blank' rel='noopener noreferrer'>
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Website</button>
+                                <button className='border-2 text-center rounded-md px-4 py-3 m-2 bg-white text-gray-700 font-semibold text-lg hover:border-[#4171ff] transition ease-in-out duration-500'>Website</button>
                             </a>       
                             <a href='https://github.com/jaydenpiao/ubc-poker' target='_blank' rel='noopener noreferrer'>
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Code</button>
+                                <button className='border-2 text-center rounded-md px-4 py-3 m-2 bg-white text-gray-700 font-semibold text-lg hover:border-[#4171ff] transition ease-in-out duration-500'>Code</button>
                             </a>                   
                         </div>
                     </div>
@@ -210,10 +210,10 @@ const Projects = () => {
                         </div>
                         <div className='pt-4 text-center'>
                             <a href='https://sign-language-translator.netlify.app/' target='_blank' rel='noopener noreferrer'>
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Website</button>
+                                <button className='border-2 text-center rounded-md px-4 py-3 m-2 bg-white text-gray-700 font-semibold text-lg hover:border-[#4171ff] transition ease-in-out duration-500'>Website</button>
                             </a>       
                             <a href='https://github.com/jaydenpiao/NWHacks' target='_blank' rel='noopener noreferrer'>
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Code</button>
+                                <button className='border-2 text-center rounded-md px-4 py-3 m-2 bg-white text-gray-700 font-semibold text-lg hover:border-[#4171ff] transition ease-in-out duration-500'>Code</button>
                             </a>                   
                         </div>
                     </div>
@@ -237,7 +237,8 @@ const Projects = () => {
                                 <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Instagram</button>
                             </a>        */}
                             <a href='https://github.com/jaydenpiao/ATM' target='_blank' rel='noopener noreferrer'>
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Code</button>
+                                <button className='border-2 text-center rounded-md px-4 py-3 m-2 bg-white text-gray-700 font-semibold text-lg hover:border-[#4171ff] transition ease-in-out duration-500'>Code</button>
+                                
                             </a>                   
                         </div>
                     </div>

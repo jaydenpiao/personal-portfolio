@@ -39,6 +39,11 @@ const Navbar = () => {
                 </Link>
             </li>
             <li>
+                <Link to="experience" smooth={true} duration={500} className='hover:underline'>
+                    Experience
+                </Link>
+            </li>
+            <li>
                 <Link to="contact" smooth={true} duration={500} className='hover:underline'>
                     Contact
                 </Link>
@@ -52,7 +57,7 @@ const Navbar = () => {
         </div>
 
         {/* mobile menu */}
-        <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'}>
+        <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-white flex flex-col justify-center items-center'}>
             <li className='py-6 text-4xl'>
                 <Link onClick={handleClick} to="home" smooth={true} duration={500}>
                     Home
@@ -71,6 +76,11 @@ const Navbar = () => {
             <li className='py-6 text-4xl'>
                 <Link onClick={handleClick} to="projects" smooth={true} duration={500}>
                     Projects
+                </Link>
+            </li>
+            <li className='py-6 text-4xl'>
+                <Link onClick={handleClick} to="experience" smooth={true} duration={500}>
+                    Experience
                 </Link>
             </li>
             <li className='py-6 text-4xl'>
