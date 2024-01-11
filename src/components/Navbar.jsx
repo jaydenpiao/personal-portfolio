@@ -19,32 +19,32 @@ const Navbar = () => {
         {/* menu */}
         <ul className='hidden md:flex font-semibold'>
             <li>
-                <Link to="home" smooth={true} duration={500} className='hover:underline'>
+                <Link to="home" smooth={true} duration={500} className='hover:underline cursor-pointer'>
                     Home
                 </Link>
             </li>
             <li>
-                <Link to="about" smooth={true} duration={500} className='hover:underline'>
+                <Link to="about" smooth={true} duration={500} className='hover:underline cursor-pointer'>
                     About
                 </Link>
             </li>
             <li>
-                <Link to="skills" smooth={true} duration={500} className='hover:underline'>
+                <Link to="skills" smooth={true} duration={500} className='hover:underline cursor-pointer'>
                     Skills
                 </Link>
             </li>
             <li>
-                <Link to="projects" smooth={true} duration={500} className='hover:underline'>
+                <Link to="projects" smooth={true} duration={500} className='hover:underline cursor-pointer'>
                     Projects
                 </Link>
             </li>
             <li>
-                <Link to="experience" smooth={true} duration={500} className='hover:underline'>
+                <Link to="experience" smooth={true} duration={500} className='hover:underline cursor-pointer'>
                     Experience
                 </Link>
             </li>
             <li>
-                <Link to="contact" smooth={true} duration={500} className='hover:underline'>
+                <Link to="contact" smooth={true} duration={500} className='hover:underline cursor-pointer'>
                     Contact
                 </Link>
             </li>
@@ -52,39 +52,39 @@ const Navbar = () => {
         
 
         {/* hamburger */}
-        <div onClick={handleClick} className='md:hidden z-10'>
+        <div onClick={handleClick} className='md:hidden z-10 cursor-pointer'>
             {!nav ? <FaBars /> : <FaTimes />}
         </div>
 
         {/* mobile menu */}
         <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-white flex flex-col justify-center items-center'}>
             <li className='py-6 text-4xl'>
-                <Link onClick={handleClick} to="home" smooth={true} duration={500}>
+                <Link onClick={handleClick} to="home" smooth={true} duration={500} className='cursor-pointer'>
                     Home
                 </Link>
             </li>
             <li className='py-6 text-4xl'>
-                <Link onClick={handleClick} to="about" smooth={true} duration={500}>
+                <Link onClick={handleClick} to="about" smooth={true} duration={500} className='cursor-pointer'>
                     About
                 </Link>
             </li>
             <li className='py-6 text-4xl'>
-                <Link onClick={handleClick} to="skills" smooth={true} duration={500}>
+                <Link onClick={handleClick} to="skills" smooth={true} duration={500} className='cursor-pointer'>
                     Skills
                 </Link>
             </li>
             <li className='py-6 text-4xl'>
-                <Link onClick={handleClick} to="projects" smooth={true} duration={500}>
+                <Link onClick={handleClick} to="projects" smooth={true} duration={500} className='cursor-pointer'>
                     Projects
                 </Link>
             </li>
             <li className='py-6 text-4xl'>
-                <Link onClick={handleClick} to="experience" smooth={true} duration={500}>
+                <Link onClick={handleClick} to="experience" smooth={true} duration={500} className='cursor-pointer'>
                     Experience
                 </Link>
             </li>
             <li className='py-6 text-4xl'>
-                <Link onClick={handleClick} to="contact" smooth={true} duration={500}>
+                <Link onClick={handleClick} to="contact" smooth={true} duration={500} className='cursor-pointer'>
                     Contact
                 </Link>
             </li>

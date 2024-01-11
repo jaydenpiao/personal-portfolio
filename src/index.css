@@ -80,3 +80,7 @@
     background-size: cover;
     background-position: center;
 }
+
+li {
+  cursor: default;
+}

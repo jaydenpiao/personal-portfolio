@@ -7,7 +7,7 @@ import { m } from 'framer-motion'
 
 const Home = () => {
   return (
-    <div name='home' className='w-full h-screen bg-white'>
+    <div name='home' className='w-full h-screen bg-white cursor-default'>
         {/* container */}
         <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
             <h1 className='text-4xl sm:text-7xl font-bold pb-5'>

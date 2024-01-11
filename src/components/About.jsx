@@ -3,10 +3,11 @@ import headshot from '../assets/headshot.jpeg'
 
 const About = () => {
     return (
-      <div name='about' className='w-full min-h-screen bg-white'>
+      <div name='about' className='w-full bg-white cursor-default'>
         <div className='flex flex-col justify-center items-center w-full h-full'>
           <div className='max-w-[1000px] w-full grid grid-cols-2 gap-8'>
-            <div className='text-left sm:text-right pb-8 pl-4'>
+            {/* change "About" to center */}
+            <div className='sm:text-right pb-8 pl-4'>
               <p className='text-4xl font-bold inline border-b-4 border-[#4171ff]'>
                 About
               </p>
@@ -15,7 +16,7 @@ const About = () => {
             </div>
             <div className='max-w-[1300px] w-full grid sm:grid-cols-2 gap-8 px-4'>
               <div className='sm:justify-end flex justify-center'>
-                <img src={headshot} className='w-[400px] h-[400px] object-cover rounded-lg'></img>
+                <img src={headshot} className='w-[400px] h-[400px] object-cover rounded-lg shadow-md shadow-[#4171ff]'></img>
               </div>
               <div>
                 <p className='text-xl font-semibold'>
