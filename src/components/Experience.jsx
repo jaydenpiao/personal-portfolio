@@ -2,7 +2,6 @@ import React from 'react'
 import verse from '../assets/experience/verse.png'
 import ubc from '../assets/experience/ubc.png'
 import ubcpoker from '../assets/experience/ubcpoker.jpg'
-import tbots from '../assets/experience/tbots.webp'
 
 
 const Experience = () => {
@@ -18,7 +17,7 @@ const Experience = () => {
             <div className='flex flex-col gap-2 pt-4 cursor-default'>
                 {/* company */}
                 <div className='flex items-center gap-4'>
-                    <img src={ubcpoker} className='rounded-lg w-10'></img>
+                    <img src={ubcpoker} alt="ubc poker" className='rounded-lg w-10'></img>
                     <h1 className='text-3xl font-bold'>UBC Poker Club</h1>
                 </div>
                 {/* role */}
@@ -61,7 +60,7 @@ const Experience = () => {
             <div className='flex flex-col gap-2 pt-8 cursor-default'>
                 {/* company */}
                 <div className='flex items-center gap-4'>
-                    <img src={verse} className='rounded-lg w-10'></img>
+                    <img src={verse} alt="verse" className='rounded-lg w-10'></img>
                     <h1 className='text-3xl font-bold'>The Verse</h1>
                 </div>
                 {/* role */}
@@ -108,7 +107,7 @@ const Experience = () => {
             <div className='flex flex-col gap-2 pt-8 cursor-default'>
                 {/* company */}
                 <div className='flex items-center gap-4'>
-                    <img src={ubc} className='rounded-lg w-10 pl-[1px]'></img>
+                    <img src={ubc} alt="ubc" className='rounded-lg w-10 pl-[1px]'></img>
                     <h1 className='text-3xl font-bold'>UBC Thunderbots</h1>
                 </div>
                 {/* role */}

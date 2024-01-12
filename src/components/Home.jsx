@@ -2,7 +2,6 @@ import React from 'react'
 import {HiArrowNarrowRight} from 'react-icons/hi'
 import { Link } from 'react-scroll'
 import { TypeAnimation } from 'react-type-animation'
-import { m } from 'framer-motion'
 
 
 const Home = () => {

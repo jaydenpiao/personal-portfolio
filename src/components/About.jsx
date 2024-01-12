@@ -13,12 +13,12 @@ const About = () => {
             </div>
             <div></div>
             </div>
-            <div className='max-w-[1300px] w-full grid sm:grid-cols-2 gap-8 px-4'>
+            <div className='max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4'>
               <div className='sm:justify-end flex justify-center'>
-                <img src={headshot} className='w-[400px] h-[400px] object-cover rounded-lg shadow-md shadow-[#4171ff]'></img>
+                <img src={headshot} alt="headshot" className='w-[500px] h-[500px] object-cover rounded-lg shadow-md shadow-[#4171ff]'></img>
               </div>
               <div>
-                <p className='text-xl font-semibold'>
+                <p className='text-xl font-semibold pl-7 sm:pl-0'>
                 I'm a full-stack developer with a deep commitment to creating products that
                 enhance the lives of those in my community. As a 3rd year Mathematics student
                 at the University of British Columbia, I strive to merge my academic pursuits

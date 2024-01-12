@@ -44,13 +44,13 @@ const Projects = () => {
                         </span>
                         <div className='pt-4 flex'>
                             <span>
-                                <img className='w-8' src={python}></img>
+                                <img className='w-8' src={python} alt="python icon"></img>
                             </span>
                             <span>
-                                <img className='w-8 ml-1' src={javascript}></img>
+                                <img className='w-8 ml-1' src={javascript} alt="js icon"></img>
                             </span>
                             <span>
-                                <img className='w-8' src={figma}></img>
+                                <img className='w-8' src={figma} alt="figma icon"></img>
                             </span>
                         </div>
                         <div className='pt-4 text-center'>
@@ -74,25 +74,25 @@ const Projects = () => {
                         </span>
                         <div className='pt-4 flex'>
                             <span>
-                                <img className='w-8' src={python}></img>
+                                <img className='w-8' src={python} alt="python icon"></img>
                             </span>
                             <span>
-                                <img className='w-8 ml-1' src={javascript}></img>
+                                <img className='w-8 ml-1' src={javascript} alt="js icon"></img>
                             </span>
                             <span>
-                                <img className='w-8 ml-1' src={react}></img>
+                                <img className='w-8 ml-1' src={react} alt="react icon"></img>
                             </span>
                             <span>
-                                <img className='w-8 ml-1' src={node}></img>
+                                <img className='w-8 ml-1' src={node} alt="react icon"></img>
                             </span>
                             <span>
-                                <img className='w-8 ml-1 mt-2' src={express}></img>
+                                <img className='w-8 ml-1 mt-2' src={express} alt="express icon"></img>
                             </span>
                             <span>
-                                <img className='w-8 ml-1' src={mongodb}></img>
+                                <img className='w-8 ml-1' src={mongodb} alt="mongodb icon"></img>
                             </span>
                             <span>
-                                <img className='w-8 ml-1' src={tailwind}></img>
+                                <img className='w-8 ml-1' src={tailwind} alt="tailwind icon"></img>
                             </span>
                         </div>
                         <div className='pt-4 text-center'>
@@ -116,25 +116,25 @@ const Projects = () => {
                         </span>
                         <div className='pt-4 flex'>
                             <span>
-                                <img className='w-8' src={ts}></img>
+                                <img className='w-8' src={ts} alt="ts icon"></img>
                             </span>
                             <span>
-                                <img className='w-8 ml-1' src={react}></img>
+                                <img className='w-8 ml-1' src={react} alt="react icon"></img>
                             </span>
                             <span>
-                                <img className='w-8 ml-1' src={vite}></img>
+                                <img className='w-8 ml-1' src={vite} alt="vite icon"></img>
                             </span>
                             <span>
-                                <img className='w-8 ml-1' src={node}></img>
+                                <img className='w-8 ml-1' src={node} alt="node icon"></img>
                             </span>
                             <span>
-                                <img className='w-8 ml-1 mt-2' src={express}></img>
+                                <img className='w-8 ml-1 mt-2' src={express} alt="express icon"></img>
                             </span>
                             <span>
-                                <img className='w-8 ml-1' src={mongodb}></img>
+                                <img className='w-8 ml-1' src={mongodb} alt="mongodb icon"></img>
                             </span>
                             <span>
-                                <img className='w-8 ml-1' src={openai}></img>
+                                <img className='w-8 ml-1' src={openai} alt="openai icon"></img>
                             </span>
                         </div>
                         <div className='pt-4 text-center'>
@@ -158,20 +158,20 @@ const Projects = () => {
                         </span>
                         <div className='pt-4 flex'>
                             <span>
-                                <img className='w-8 ml-1' src={react}></img>
+                                <img className='w-8 ml-1' src={react} alt="react icon"></img>
                             </span>
                             <span>
-                                <img className='w-8' src={html}></img>
+                                <img className='w-8' src={html} alt="HTML icon"></img>
                             </span>
                             <span>
-                                <img className='w-8 ml-1' src={css}></img>
+                                <img className='w-8 ml-1' src={css} alt="css icon"></img>
                             </span>
                             <span>
-                                <img className='w-8 ml-1' src={javascript}></img>
+                                <img className='w-8 ml-1' src={javascript} alt="js icon"></img>
                             </span>
                             
                             <span>
-                                <img className='w-8 ml-1' src={tailwind}></img>
+                                <img className='w-8 ml-1' src={tailwind} alt="tailwind icon"></img>
                             </span>
                         </div>
                         <div className='pt-4 text-center'>
@@ -195,17 +195,17 @@ const Projects = () => {
                         </span>
                         <div className='pt-4 flex'>
                             <span>
-                                <img className='w-8' src={html}></img>
+                                <img className='w-8' src={html} alt="HTML icon"></img>
                             </span>
                             <span>
-                                <img className='w-8 ml-1' src={css}></img>
+                                <img className='w-8 ml-1' src={css}alt="css icon"></img>
                             </span>
                             <span>
-                                <img className='w-8 ml-1' src={javascript}></img>
+                                <img className='w-8 ml-1' src={javascript} alt="js icon"></img>
                             </span>
                             
                             <span>
-                                <img className='w-7 ml-1' src={tensorflow}></img>
+                                <img className='w-7 ml-1' src={tensorflow} alt="tensorflow icon"></img>
                             </span>
                         </div>
                         <div className='pt-4 text-center'>
@@ -229,7 +229,7 @@ const Projects = () => {
                         </span>
                         <div className='pt-4 flex'>
                             <span>
-                                <img className='w-8' src={java}></img>
+                                <img className='w-8' src={java} alt="java icon"></img>
                             </span>
                         </div>
                         <div className='pt-4 text-center'>
