@@ -18,7 +18,7 @@ const About = () => {
                 <img src={headshot} alt="headshot" className='w-[500px] h-[500px] object-cover rounded-lg shadow-md shadow-[#4171ff]'></img>
               </div>
               <div>
-                <p className='text-xl font-semibold pl-7 sm:pl-0'>
+                <p className='text-xl font-semibold'>
                 I'm a full-stack developer with a deep commitment to creating products that
                 enhance the lives of those in my community. As a 3rd year Mathematics student
                 at the University of British Columbia, I strive to merge my academic pursuits
