@@ -34,7 +34,7 @@ const Home = () => {
                 />
             </h2>
             <p className='py-4 max-w-[700px] font-medium text-lg'>
-                Currently in my third year studying mathematics at the University of British 
+                Currently in my third year studying Mathematics at the University of British 
                 Columbia, I am actively exploring opportunities in software engineering. My 
                 aim is to develop my technical skills further and make a positive impact on the 
                 community.
