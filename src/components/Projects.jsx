@@ -5,6 +5,8 @@ import atm from '../assets/projects/atm.png'
 import gpt from '../assets/projects/gpt.png'
 import u4ea from '../assets/projects/u4ea.png'
 import poker from '../assets/projects/ubcpoker.png'
+import vita from '../assets/projects/vita.png'
+
 import python from '../assets/skills/python.png'
 import javascript from '../assets/skills/javascript.png'
 import java from '../assets/skills/java.png'
@@ -20,6 +22,8 @@ import html from '../assets/skills/html.png'
 import css from '../assets/skills/css.png'
 import tensorflow from '../assets/skills/tensorflow.png'
 import figma from '../assets/skills/figma.png'
+import firebase from '../assets/skills/firebase.png'
+
 
 
 const Projects = () => {
@@ -32,6 +36,46 @@ const Projects = () => {
 
             {/* container */}
             <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
+
+                {/* item */}
+                <div style={{backgroundImage: `url(${vita})`}}
+                className='relative square-container shadow-lg shadow-[#4171ff] group container rounded-md mx-auto content-div text-center'>
+
+                    {/* hover effect */}
+                    <div className='absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100'>
+                        <span className='text-2xl font-bold text-white tracking-wider'>
+                            Vita
+                        </span>
+                        <div className='pt-4 flex'>
+                            <span>
+                                <img className='w-8' src={ts} alt="ts icon"></img>
+                            </span>
+                            <span>
+                                <img className='w-8 ml-1' src={react} alt="react icon"></img>
+                            </span>
+                            <span>
+                                <img className='w-8' src={firebase} alt="firebase icon"></img>
+                            </span>
+                            <span>
+                                <img className='w-8' src={python} alt="python icon"></img>
+                            </span>
+                            <span>
+                                <img className='w-7 ml-1' src={tensorflow} alt="tensorflow icon"></img>
+                            </span>
+                            <span>
+                                <img className='w-8' src={figma} alt="figma icon"></img>
+                            </span>
+                        </div>
+                        <div className='pt-4 text-center'>
+                            <a href='https://devpost.com/software/vita-paxt8v?ref_content=user-portfolio&ref_feature=in_progress' target='_blank' rel='noopener noreferrer'>
+                                <button className='border-2 text-center rounded-md px-4 py-3 m-2 bg-white text-gray-700 font-semibold text-lg hover:border-[#4171ff] transition ease-in-out duration-500'>DevPost</button>
+                            </a>       
+                            <a href='https://github.com/jaydenpiao/Vita' target='_blank' rel='noopener noreferrer'>
+                                <button className='border-2 text-center rounded-md px-4 py-3 m-2 bg-white text-gray-700 font-semibold text-lg hover:border-[#4171ff] transition ease-in-out duration-500'>Code</button>
+                            </a>                   
+                        </div>
+                    </div>
+                </div>
 
                 {/* item */}
                 <div style={{backgroundImage: `url(${albumnutrition})`}}
@@ -203,7 +247,6 @@ const Projects = () => {
                             <span>
                                 <img className='w-8 ml-1' src={javascript} alt="js icon"></img>
                             </span>
-                            
                             <span>
                                 <img className='w-7 ml-1' src={tensorflow} alt="tensorflow icon"></img>
                             </span>
