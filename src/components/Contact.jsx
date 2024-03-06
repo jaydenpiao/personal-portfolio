@@ -1,8 +1,11 @@
 import React from 'react'
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
+import { BsFillPersonLinesFill } from 'react-icons/bs';
 
 const Contact = () => {
   return (
-    <div name='contact' className='w-full flex justify-center items-center p-4 pt-20'>
+    <div name='contact' className='w-full flex flex-col items-center p-4 pt-20'>
         <form method='POST' action='https://getform.io/f/970d252d-efdf-43f2-978e-4c55aaceceb3' className='flex flex-col max-w-[600px] w-full'>
             <div className='pb-8'>
                 <p className='text-4xl font-bold inline border-b-4 border-[#4171ff] cursor-default'>Contact</p>
@@ -13,6 +16,21 @@ const Contact = () => {
             <button className='border-2 rounded-md hover:border-[#4171ff] px-4 py-3 my-8 mx-auto flex items-center transition ease-in-out duration-500'>Submit</button>
         </form>
 
+        {/* icons container */}
+        <div className='flex justify-center items-center space-x-6 mb-8'>
+            <a href='https://www.linkedin.com/in/jaydenpiao/' target='_blank' rel='noopener noreferrer'>
+                <FaLinkedin size={30} />
+            </a>
+            <a href='https://github.com/jaydenpiao' target='_blank' rel='noopener noreferrer'>
+                <FaGithub size={30} />
+            </a>
+            <a href='mailto:jaydenpiao@gmail.com' target='_blank' rel='noopener noreferrer'>
+                <HiOutlineMail size={30} />
+            </a>
+            <a href='https://drive.google.com/file/d/1DZ5ENnf9C_oZidiCvQzff-c8bc4Znt-Z/view?usp=sharing' target='_blank' rel='noopener noreferrer'>
+                <BsFillPersonLinesFill size={30} />
+            </a>
+        </div>
     </div>
   )
 }
