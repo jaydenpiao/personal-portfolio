@@ -65,11 +65,8 @@ const Projects = () => {
                                 <img className='w-8 ml-1' src={tailwind} alt="tailwind icon"></img>
                             </span>
                         </div>
-                        <div className='pt-4 text-center'>
-                            <a href='https://devpost.com/software/vita-paxt8v?ref_content=user-portfolio&ref_feature=in_progress' target='_blank' rel='noopener noreferrer'>
-                                <button className='border-2 text-center rounded-md px-4 py-3 m-2 bg-white text-gray-700 font-semibold text-lg hover:border-[#4171ff] transition ease-in-out duration-500'>DevPost</button>
-                            </a>       
-                            <a href='https://github.com/jaydenpiao/Vita' target='_blank' rel='noopener noreferrer'>
+                        <div className='pt-4 text-center'> 
+                            <a href='https://github.com/aradsab/MusicArt-CIC-hackathon' target='_blank' rel='noopener noreferrer'>
                                 <button className='border-2 text-center rounded-md px-4 py-3 m-2 bg-white text-gray-700 font-semibold text-lg hover:border-[#4171ff] transition ease-in-out duration-500'>Code</button>
                             </a>                   
                         </div>
