@@ -87,7 +87,23 @@ const Navbar = () => {
                     Contact
                 </Link>
             </li>
-        </ul>
+
+            {/* icons container*/}
+            <div className='flex justify-center items-center space-x-6 mt-8'>
+                <a href='https://www.linkedin.com/in/jaydenpiao/' target='_blank' rel='noopener noreferrer'>
+                    <FaLinkedin size={35} />
+                </a>
+                <a href='https://github.com/jaydenpiao' target='_blank' rel='noopener noreferrer'>
+                    <FaGithub size={35} />
+                </a>
+                <a href='mailto:jaydenpiao@gmail.com' target='_blank' rel='noopener noreferrer'>
+                    <HiOutlineMail size={35} />
+                </a>
+                <a href='https://drive.google.com/file/d/1DZ5ENnf9C_oZidiCvQzff-c8bc4Znt-Z/view?usp=sharing' target='_blank' rel='noopener noreferrer'>
+                    <BsFillPersonLinesFill size={35} />
+                </a>
+            </div>
+        </ul>        
 
         {/* social icons */}
         <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
