@@ -2,6 +2,7 @@ import React from 'react'
 import verse from '../assets/experience/verse.png'
 import ubc from '../assets/experience/ubc.png'
 import ubcpoker from '../assets/experience/ubcpoker.jpg'
+import ubcmint from '../assets/experience/ubcmint.png'
 
 
 const Experience = () => {
@@ -11,6 +12,47 @@ const Experience = () => {
         <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
             <div className='pb-8'>
                 <p className='text-4xl font-bold inline border-b-4 border-[#4171ff] cursor-default'>Experience</p>
+            </div>
+
+            {/* card */}
+            <div className='flex flex-col gap-2 pt-4 cursor-default'>
+                {/* company */}
+                <div className='flex items-center gap-4'>
+                    <img src={ubcmint} alt="ubc mint" className='rounded-lg w-12 ml-[-4px]'></img>
+                    <h1 className='text-3xl font-bold ml-[-4px]'>UBC MINT</h1>
+                </div>
+                {/* role */}
+                <div className='ml-[11px] flex items-stretch gap-5'>
+                    {/* timeline */}
+                    <div className='flex flex-col items-center ml-1'>
+                        {/* dot */}
+                        <div className='w-3 h-3  bg-[#4171ff] rounded-lg mt-[7px] mb-1'></div>
+                        {/* line */}
+                        <div className='w-[2px] bg-[#4171ff] flex-grow'></div>
+                    </div>
+                    {/* title */}
+                    <div className='flex flex-col gap-1'>
+                        <h1 className='font-semibold text-xl'>Software Engineer</h1>
+                        {/* date */}
+                        <p className='text-gray-400 font-semibold'>
+                            MAR 2024 - PRESENT
+                        </p>
+                        {/* info */}
+                        <ul className='list-disc list-outside ml-5 font-medium'>
+                            <li className='pb-2 pl-[0px]'>
+                                UBC MINT (Multifaceted Innovations in Neurotechnology) is an engineering design team
+                            </li>
+                            {/* <li className='pb-2 pl-[0px]'>
+                                Leveraged HTML, CSS, JavaScript, React, and Tailwind CSS to create a responsive 
+                                and mobile-friendly user experience which improved tournament registration by 10%
+                            </li>
+                            <li className='pb-2 pl-[0px]'>
+                                Collaborated with internal stakeholders to ensure the website's content and design 
+                                aligned with the club's evolving visions and objectives
+                            </li> */}
+                        </ul>
+                    </div>
+                </div>
             </div>
 
             {/* card */}
