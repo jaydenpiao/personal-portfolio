@@ -40,7 +40,7 @@ const Experience = () => {
                         {/* info */}
                         <ul className='list-disc list-outside ml-5 font-medium'>
                             <li className='pb-2 pl-[0px]'>
-                                UBC MINT (Multifaceted Innovations in Neurotechnology) is an engineering design team
+                                UBC MINT (Multifaceted Innovation in NeuroTechnology) is an engineering design team under UBC BEST (Biomedical Engineering Student Team)
                             </li>
                             {/* <li className='pb-2 pl-[0px]'>
                                 Leveraged HTML, CSS, JavaScript, React, and Tailwind CSS to create a responsive 
