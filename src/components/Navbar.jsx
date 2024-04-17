@@ -99,7 +99,7 @@ const Navbar = () => {
                 <a href='mailto:jaydenpiao@gmail.com' target='_blank' rel='noopener noreferrer'>
                     <HiOutlineMail size={35} />
                 </a>
-                <a href='https://drive.google.com/file/d/1NSMAKyG5g8sifpGQEwxTcDjnm0TmtGU-/view?usp=sharing' target='_blank' rel='noopener noreferrer'>
+                <a href='https://drive.google.com/file/d/1y4bXWwGK4G06ufyMzc3qq5Y328F1sejU/view?usp=sharing' target='_blank' rel='noopener noreferrer'>
                     <BsFillPersonLinesFill size={35} />
                 </a>
             </div>
@@ -128,7 +128,7 @@ const Navbar = () => {
                 </li>
                 <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
                     <a className='flex justify-between items-center w-full text-gray-300'
-                    href='https://drive.google.com/file/d/1NSMAKyG5g8sifpGQEwxTcDjnm0TmtGU-/view?usp=sharing' target='_blank' rel='noopener noreferrer'>
+                    href='https://drive.google.com/file/d/1y4bXWwGK4G06ufyMzc3qq5Y328F1sejU/view?usp=sharing' target='_blank' rel='noopener noreferrer'>
                         Resume <BsFillPersonLinesFill size={30} />
                     </a>
                 </li>
