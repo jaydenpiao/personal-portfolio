@@ -84,14 +84,10 @@ const Experience = () => {
                             <li className='pb-2 pl-[0px]'>
                                 UBC MINT (Multifaceted Innovation in NeuroTechnology) is an engineering design team under UBC BEST (Biomedical Engineering Student Team)
                             </li>
-                            {/* <li className='pb-2 pl-[0px]'>
-                                Leveraged HTML, CSS, JavaScript, React, and Tailwind CSS to create a responsive 
-                                and mobile-friendly user experience which improved tournament registration by 10%
-                            </li>
                             <li className='pb-2 pl-[0px]'>
-                                Collaborated with internal stakeholders to ensure the website's content and design 
-                                aligned with the club's evolving visions and objectives
-                            </li> */}
+                            Building an open-source BCI interface employing Rust, SQL, and Next.js to foster accessibility and collaboration in
+neurotechnology research with EEG headsets
+                            </li>
                         </ul>
                     </div>
                 </div>
