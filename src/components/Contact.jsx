@@ -27,7 +27,7 @@ const Contact = () => {
             <a href='mailto:jaydenpiao@gmail.com' target='_blank' rel='noopener noreferrer'>
                 <HiOutlineMail size={30} />
             </a>
-            <a href='https://drive.google.com/file/d/1d-JCKh_JAftlanvV0_rozg2neGs3b47r/view?usp=sharing' target='_blank' rel='noopener noreferrer'>
+            <a href='https://drive.google.com/file/d/1fOYM17yV6rkVqt5Pf953avs4-iOtrCzF/view?usp=sharing' target='_blank' rel='noopener noreferrer'>
                 <BsFillPersonLinesFill size={30} />
             </a>
         </div>

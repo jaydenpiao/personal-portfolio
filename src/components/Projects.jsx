@@ -7,6 +7,7 @@ import u4ea from '../assets/projects/u4ea.png'
 import poker from '../assets/projects/ubcpoker.png'
 import vita from '../assets/projects/vita.png'
 import melodybrush from '../assets/projects/melodybrush.png'
+import kingscraft from '../assets/projects/kingscraft.png'
 
 import python from '../assets/skills/python.png'
 import javascript from '../assets/skills/javascript.png'
@@ -38,6 +39,44 @@ const Projects = () => {
 
             {/* container */}
             <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
+
+                {/* item */}
+                <div style={{backgroundImage: `url(${kingscraft})`}}
+                className='relative square-container shadow-lg shadow-[#4171ff] group container rounded-md mx-auto content-div text-center'>
+
+                    {/* hover effect */}
+                    <div className='absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100'>
+                        <span className='text-2xl font-bold text-white tracking-wider'>
+                            Kings Craft (SFU Surge Runner-Up)
+                        </span>
+                        <div className='pt-4 flex'>
+                            <span>
+                                <img className='w-8 ml-1' src={react} alt="react icon"></img>
+                            </span>
+                            <span>
+                                <img className='w-8 ml-1' src={javascript} alt="js icon"></img>
+                            </span>
+                            <span>
+                                <img className='w-8 ml-1' src={python} alt="python icon"></img>
+                            </span>
+                            <span>
+                                <img className='h-5 mt-1.5 ml-1' src={aws} alt="aws icon"></img>
+                            </span>
+                            <span>
+                                <img className='w-8' src={firebase} alt="firebase icon"></img>
+                            </span>
+                        </div>
+                        <div className='pt-4 text-center'>
+                            <a href='https://devpost.com/software/kings-craft' target='_blank' rel='noopener noreferrer'>
+                                <button className='border-2 text-center rounded-md px-4 py-3 m-2 bg-white text-gray-700 font-semibold text-lg hover:border-[#4171ff] transition ease-in-out duration-500'>DevPost</button>
+                            </a>       
+                            <a href='https://github.com/koh3n/KINGSCRAFT' target='_blank' rel='noopener noreferrer'>
+                                <button className='border-2 text-center rounded-md px-4 py-3 m-2 bg-white text-gray-700 font-semibold text-lg hover:border-[#4171ff] transition ease-in-out duration-500'>Code</button>
+                            </a>                   
+                        </div>
+                    </div>
+                </div>
+
 
                 {/* item */}
                 <div style={{backgroundImage: `url(${melodybrush})`}}
@@ -73,6 +112,7 @@ const Projects = () => {
                     </div>
                 </div>
 
+                
                 {/* item */}
                 <div style={{backgroundImage: `url(${vita})`}}
                 className='relative square-container shadow-lg shadow-[#4171ff] group container rounded-md mx-auto content-div text-center'>
