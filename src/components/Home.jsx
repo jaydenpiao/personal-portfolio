@@ -17,7 +17,7 @@ const Home = () => {
             <h2 className='text-4xl sm:text-6xl font-bold text-[#4171ff]'>
                 <TypeAnimation
                     sequence={[
-                        "a Junior at UBC",
+                        "a Senior at UBC",
                         1500,
                         "a Software Engineer",
                         1500,
@@ -34,7 +34,7 @@ const Home = () => {
                 />
             </h2>
             <p className='py-4 max-w-[700px] font-medium text-lg'>
-                Currently in my third year studying Mathematics at the University of British 
+                Currently in my third year studying Computer Science at the University of British 
                 Columbia, I am actively exploring opportunities in software engineering. My 
                 aim is to develop my technical skills further and make a positive impact on the 
                 community.

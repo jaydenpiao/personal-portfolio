@@ -20,7 +20,7 @@ const About = () => {
               <div>
                 <p className='text-xl font-semibold'>
                 I'm a full-stack developer with a deep commitment to creating products that
-                enhance the lives of those in my community. As a 3rd year Mathematics student
+                enhance the lives of those in my community. As a 3rd year Computer Science student
                 at the University of British Columbia, I strive to merge my academic pursuits
                 with my passion for technology.
                 <br />
