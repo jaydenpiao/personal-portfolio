@@ -33,7 +33,7 @@ const Experience = () => {
                     </div>
                     {/* title */}
                     <div className='flex flex-col gap-1'>
-                        <h1 className='font-semibold text-xl'>Machine Learning Engineer Intern</h1>
+                        <h1 className='font-semibold text-xl'>Software Engineer Intern</h1>
                         {/* date */}
                         <p className='text-gray-400 font-semibold'>
                             MAY 2024 - PRESENT
@@ -41,21 +41,19 @@ const Experience = () => {
                         {/* info */}
                         <ul className='list-disc list-outside ml-5 font-medium'>
                             <li className='pb-2 pl-[0px]'>
-                            Mitigated aggressive behaviors by optimizing scheduling agent interactions through targeted prompt engineering
+                            Leveraged GPT-4o, Instructor, and Pydantic to enhance 7-character code parsing accuracy in transcripts from 13% to 87%
 
                             </li>
                             <li className='pb-2 pl-[0px]'>
-                            Utilizing Instructor and Pydantic to accurately parse 7-character codes for a delivery orchestration customer
+                            Created a Dockerized web app on Amazon ECS using a CI/CD pipeline with GitHub Actions to explore TTS voices
 
                             </li>
-                            {/* <li className='pb-2 pl-[0px]'>
-                                Leveraged HTML, CSS, JavaScript, React, and Tailwind CSS to create a responsive 
-                                and mobile-friendly user experience which improved tournament registration by 10%
-                            </li>
                             <li className='pb-2 pl-[0px]'>
-                                Collaborated with internal stakeholders to ensure the website's content and design 
-                                aligned with the club's evolving visions and objectives
-                            </li> */}
+                            Developed an evaluation framework for conducting calls between AI agents and AI humans, generating latency statistics
+and measuring data retrieval accuracy using the Instructor Python library
+
+                            </li>
+                            
                         </ul>
                     </div>
                 </div>
