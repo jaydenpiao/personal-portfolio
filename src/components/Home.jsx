@@ -17,7 +17,7 @@ const Home = () => {
             <h2 className='text-4xl sm:text-6xl font-bold text-[#4171ff]'>
                 <TypeAnimation
                     sequence={[
-                        "a Senior at UBC",
+                        "a Junior at UBC",
                         1500,
                         "a Software Engineer",
                         1500,
