@@ -36,7 +36,7 @@ const Experience = () => {
                         <h1 className='font-semibold text-xl'>Software Engineer Intern</h1>
                         {/* date */}
                         <p className='text-gray-400 font-semibold'>
-                            MAY 2024 - PRESENT
+                            MAY 2024 - DEC 2024
                         </p>
                         {/* info */}
                         <ul className='list-disc list-outside ml-5 font-medium'>
