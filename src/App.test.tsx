@@ -53,4 +53,13 @@ describe("portfolio app", () => {
       "https://github.com/jaydenpiao",
     );
   });
+
+  it("renders a practical tools section", () => {
+    render(<App />);
+
+    expect(screen.getByRole("heading", { name: /Tools I use most/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Product UI" })).toBeInTheDocument();
+    expect(screen.getByText(/TypeScript, React, Python, Go, Rust, AWS/i)).toBeInTheDocument();
+    expect(screen.getByText("Playwright")).toBeInTheDocument();
+  });
 });

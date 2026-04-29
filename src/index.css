@@ -424,7 +424,7 @@ h3 {
 }
 
 .stack-list span,
-.skill-group span {
+.tool-list span {
   display: inline-flex;
   align-items: center;
   min-height: 30px;
@@ -537,21 +537,104 @@ h3 {
   line-height: 1.55;
 }
 
-.skill-grid {
+.tools-layout {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: minmax(220px, 0.35fr) minmax(0, 1fr);
+  gap: 16px;
+  align-items: stretch;
+}
+
+.tools-callout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+  padding: 22px;
+  border-radius: var(--radius);
+  background:
+    linear-gradient(160deg, rgb(17 24 39 / 96%), rgb(0 109 119 / 90%)),
+    var(--ink);
+  color: white;
+  box-shadow: 0 18px 45px rgb(15 23 42 / 12%);
+}
+
+.tools-callout span,
+.skill-group-heading span {
+  color: var(--amber);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.tools-callout h3 {
+  max-width: 260px;
+  margin: 18px 0;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  line-height: 0.98;
+}
+
+.tools-callout p {
+  margin-bottom: 0;
+  color: rgb(255 255 255 / 78%);
+  line-height: 1.55;
+}
+
+.skill-grid {
+  counter-reset: tool-group;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
 }
 
 .skill-group {
+  position: relative;
+  min-height: 210px;
   padding: 20px;
+  overflow: hidden;
+}
+
+.skill-group::after {
+  counter-increment: tool-group;
+  content: "0" counter(tool-group);
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  color: color-mix(in srgb, var(--line), transparent 12%);
+  font-size: 2.7rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.skill-group-heading {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.skill-group-heading span {
+  color: var(--teal);
 }
 
 .skill-group h3 {
+  max-width: calc(100% - 58px);
+  margin: 0;
   font-size: 1.05rem;
 }
 
-.skill-group div {
+.skill-group p {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 18px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.tool-list {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -614,13 +697,17 @@ h3 {
   .hero,
   .section-heading,
   .contact-section,
-  .project-card {
+  .project-card,
+  .tools-layout {
     grid-template-columns: 1fr;
   }
 
-  .status-strip,
-  .skill-grid {
+  .status-strip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tools-callout {
+    min-height: auto;
   }
 
   .project-card-prominent {
@@ -680,6 +767,7 @@ h3 {
 
   .project-content,
   .timeline-item,
+  .tools-callout,
   .skill-group {
     padding: 18px;
   }

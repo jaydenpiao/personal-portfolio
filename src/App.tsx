@@ -215,24 +215,38 @@ function ExperienceSection() {
 }
 
 function SkillsSection() {
+  const coreTools = ["TypeScript", "React", "Python", "Go", "Rust", "AWS"];
+
   return (
-    <section id="skills" className="section-frame section-block">
+    <section id="skills" className="section-frame section-block tools-section">
       <SectionHeading
-        eyebrow="Capabilities"
-        title="Tools grouped by the work they support"
-        summary="A smaller skills surface is easier to scan and more useful than a wall of logos."
+        eyebrow="Tools"
+        title="Tools I use most"
+        summary="Mostly TypeScript and React for product UI, Python/Go/Rust for backend systems, and a small set of testing and deploy tools that keep the work clean."
       />
-      <div className="skill-grid">
-        {portfolio.skillGroups.map((group) => (
-          <article key={group.name} className="skill-group">
-            <h3>{group.name}</h3>
-            <div>
-              {group.skills.map((skill) => (
-                <span key={skill}>{skill}</span>
-              ))}
-            </div>
-          </article>
-        ))}
+      <div className="tools-layout">
+        <aside className="tools-callout" aria-label="Core tools">
+          <span>Day to day</span>
+          <h3>{coreTools.join(", ")}</h3>
+          <p>Enough range to move between UI, backend, infra, and systems work without turning the page into a keyword dump.</p>
+        </aside>
+
+        <div className="skill-grid">
+          {portfolio.skillGroups.map((group) => (
+            <article key={group.name} className="skill-group">
+              <div className="skill-group-heading">
+                <span>{group.primary}</span>
+                <h3>{group.name}</h3>
+              </div>
+              <p>{group.summary}</p>
+              <div className="tool-list">
+                {group.skills.map((skill) => (
+                  <span key={skill}>{skill}</span>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

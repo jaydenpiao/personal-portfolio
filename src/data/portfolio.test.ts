@@ -73,4 +73,20 @@ describe("portfolio content", () => {
       /production-grade demos|strongest signal/i,
     );
   });
+
+  it("keeps tools grouped around real workflows", () => {
+    expect(portfolio.skillGroups.map((group) => group.name)).toEqual([
+      "Product UI",
+      "Backend systems",
+      "Cloud and data",
+      "Voice and LLMs",
+      "Shipping loop",
+    ]);
+
+    for (const group of portfolio.skillGroups) {
+      expect(group.primary).toBeTruthy();
+      expect(group.summary.length).toBeGreaterThan(30);
+      expect(group.skills.length).toBeGreaterThanOrEqual(6);
+    }
+  });
 });

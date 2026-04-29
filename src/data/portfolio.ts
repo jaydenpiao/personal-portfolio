@@ -32,6 +32,8 @@ export type Experience = {
 
 export type SkillGroup = {
   name: string;
+  primary: string;
+  summary: string;
   skills: string[];
 };
 
@@ -310,20 +312,34 @@ export const portfolio = {
   ] satisfies Experience[],
   skillGroups: [
     {
-      name: "AI systems",
-      skills: ["Python", "FastAPI", "GPT-4o", "Anthropic SDK", "Whisper", "Pydantic"],
+      name: "Product UI",
+      primary: "React + TypeScript",
+      summary: "Responsive frontends, clean component boundaries, and interfaces that stay easy to change.",
+      skills: ["React", "TypeScript", "Vite", "CSS", "shadcn/ui", "Tailwind CSS"],
     },
     {
-      name: "Backend and systems",
-      skills: ["Go", "Multi-Paxos", "Postgres", "SSE", "Docker", "Fly.io"],
+      name: "Backend systems",
+      primary: "Python / Go / Rust",
+      summary: "APIs, storage paths, coordination services, and the lower-level pieces behind product work.",
+      skills: ["Python", "FastAPI", "Go", "Rust", "Postgres", "Redis"],
     },
     {
-      name: "Frontend product",
-      skills: ["React", "TypeScript", "Vite", "CSS", "shadcn/ui", "Vercel"],
+      name: "Cloud and data",
+      primary: "AWS + Postgres",
+      summary: "DynamoDB storage work, container deploys, SQL data models, and practical infra glue.",
+      skills: ["AWS", "DynamoDB", "ECS", "Docker", "Supabase", "Fly.io"],
     },
     {
-      name: "Engineering quality",
-      skills: ["Vitest", "pytest", "mypy", "ESLint", "GitHub Actions", "OpenTelemetry"],
+      name: "Voice and LLMs",
+      primary: "OpenAI / Anthropic",
+      summary: "Speech flows, structured parsing, eval loops, and tooling around agent behavior.",
+      skills: ["OpenAI API", "Anthropic SDK", "Whisper", "Pydantic", "Evals", "Observability"],
+    },
+    {
+      name: "Shipping loop",
+      primary: "Tests + CI",
+      summary: "Typed contracts, small checks, browser passes, and PR-sized changes before shipping.",
+      skills: ["Vitest", "pytest", "mypy", "ESLint", "GitHub Actions", "Playwright"],
     },
   ] satisfies SkillGroup[],
 };
