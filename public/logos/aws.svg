@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-labelledby="title desc">
+  <title id="title">Amazon Web Services</title>
+  <desc id="desc">AWS wordmark logo badge</desc>
+  <rect width="80" height="80" rx="18" fill="#fff"/>
+  <text x="14" y="42" fill="#232f3e" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="800" letter-spacing="-1">aws</text>
+  <path d="M18 52c10 6 29 7 43-1" fill="none" stroke="#ff9900" stroke-width="4" stroke-linecap="round"/>
+  <path d="M54 50l9-1-5 7" fill="none" stroke="#ff9900" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

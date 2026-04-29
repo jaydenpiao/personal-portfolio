@@ -36,6 +36,8 @@ describe("portfolio app", () => {
       Node.DOCUMENT_POSITION_FOLLOWING,
     );
     expect(screen.getByRole("heading", { name: "Google" })).toBeInTheDocument();
+    expect(screen.getByAltText("Google logo")).toBeInTheDocument();
+    expect(screen.getByAltText("Amazon Web Services logo")).toBeInTheDocument();
     expect(screen.getByText(/DynamoDB's new LSM-tree storage engine/i)).toBeInTheDocument();
   });
 

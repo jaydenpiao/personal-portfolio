@@ -188,8 +188,10 @@ function ExperienceSection() {
       <div className="timeline">
         {portfolio.experience.map((item) => (
           <article key={`${item.company}-${item.role}`} className="timeline-item">
-            <div className="timeline-marker" aria-hidden="true" />
-            <div>
+            <div className="timeline-logo">
+              <img src={item.logo.src} alt={item.logo.alt} loading="lazy" />
+            </div>
+            <div className="timeline-body">
               <div className="timeline-heading">
                 <h3>{item.company}</h3>
                 <span>{item.dates}</span>

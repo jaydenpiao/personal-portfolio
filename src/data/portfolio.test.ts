@@ -43,6 +43,24 @@ describe("portfolio content", () => {
     expect(portfolio.experience[1]?.bullets.join(" ")).toMatch(/DynamoDB/i);
   });
 
+  it("provides a local logo asset for every experience entry", () => {
+    const expectedLogoSources = [
+      "/logos/google.svg",
+      "/logos/aws.svg",
+      "/logos/ubc-mint.svg",
+      "/logos/marr-labs.svg",
+      "/logos/the-verse.svg",
+      "/logos/ubc-thunderbots.svg",
+    ];
+
+    for (const item of portfolio.experience) {
+      expect(item.logo.src).toMatch(/^\/logos\/.+\.svg$/);
+      expect(item.logo.alt).toMatch(new RegExp(item.company.split(" ")[0], "i"));
+    }
+
+    expect(portfolio.experience.map((item) => item.logo.src)).toEqual(expectedLogoSources);
+  });
+
   it("keeps status cards grounded in concrete work", () => {
     expect(portfolio.status.map((item) => item.label)).toEqual([
       "Recent work",

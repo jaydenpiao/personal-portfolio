@@ -22,6 +22,10 @@ export type Experience = {
   role: string;
   location: string;
   dates: string;
+  logo: {
+    src: string;
+    alt: string;
+  };
   summary: string;
   bullets: string[];
 };
@@ -213,6 +217,10 @@ export const portfolio = {
       role: "Incoming Software Engineer Intern",
       location: "Sunnyvale, CA",
       dates: "May 2026 - Jul 2026",
+      logo: {
+        src: "/logos/google.svg",
+        alt: "Google logo",
+      },
       summary:
         "Incoming Cloud SQL intern focused on replication and availability infrastructure.",
       bullets: ["Cloud SQL - Replication and Availability."],
@@ -222,6 +230,10 @@ export const portfolio = {
       role: "Software Development Engineer Intern",
       location: "Seattle, WA",
       dates: "May 2025 - Aug 2025",
+      logo: {
+        src: "/logos/aws.svg",
+        alt: "Amazon Web Services logo",
+      },
       summary:
         "Built Rust storage infrastructure for DynamoDB replication and quorum recovery paths.",
       bullets: [
@@ -235,6 +247,10 @@ export const portfolio = {
       role: "Software Engineering Lead",
       location: "Vancouver, BC",
       dates: "Mar 2024 - Aug 2025",
+      logo: {
+        src: "/logos/ubc-mint.svg",
+        alt: "UBC MINT logo",
+      },
       summary:
         "Led Rust backend work for an open Brain-Computer Interface research platform.",
       bullets: [
@@ -247,6 +263,10 @@ export const portfolio = {
       role: "Software Engineer Intern",
       location: "Remote",
       dates: "May 2024 - Dec 2024",
+      logo: {
+        src: "/logos/marr-labs.svg",
+        alt: "Marr Labs logo",
+      },
       summary:
         "Built AI-agent evaluation, observability, and infrastructure tooling for text and voice workflows.",
       bullets: [
@@ -260,6 +280,10 @@ export const portfolio = {
       role: "Software Engineer Intern",
       location: "Remote",
       dates: "May 2023 - Aug 2023",
+      logo: {
+        src: "/logos/the-verse.svg",
+        alt: "The Verse logo",
+      },
       summary:
         "Built MERN products and internal tooling for music-analysis workflows and operations.",
       bullets: [
@@ -272,6 +296,10 @@ export const portfolio = {
       role: "Software Engineer",
       location: "Vancouver, BC",
       dates: "Sep 2021 - Aug 2022",
+      logo: {
+        src: "/logos/ubc-thunderbots.svg",
+        alt: "UBC Thunderbots logo",
+      },
       summary:
         "Built real-time robotics control and decision-making systems for a RoboCup Small Size League team.",
       bullets: [
