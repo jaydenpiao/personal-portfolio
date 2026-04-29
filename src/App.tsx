@@ -8,7 +8,7 @@ import {
   TerminalSquare,
 } from "lucide-react";
 import type { ReactNode } from "react";
-import portraitUrl from "./assets/jayden-suit-cherry-blossoms.jpg";
+import portraitUrl from "./assets/jayden-palms-portrait.jpg";
 import { portfolio, type ExternalLink, type Project } from "./data/portfolio";
 
 const navigation = [
