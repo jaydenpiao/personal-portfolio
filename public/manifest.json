@@ -1,6 +1,6 @@
 {
   "short_name": "Jayden Piao",
-  "name": "Jayden Piao's Personal Portfolio",
+  "name": "Jayden Piao - Software Engineer",
   "icons": [
     {
       "src": "jp.png",
@@ -10,7 +10,7 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#4171ff",
-  "background_color": "#ffffff",
-  "description": "A personal portfolio showcasing the work and experience of Jayden Piao."
+  "theme_color": "#0f172a",
+  "background_color": "#f6f7fb",
+  "description": "Portfolio for Jayden Piao, focused on AI systems, developer tools, distributed systems, and product web apps."
 }

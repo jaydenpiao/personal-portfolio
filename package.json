@@ -2,32 +2,29 @@
   "name": "personal-portfolio",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
+  "packageManager": "npm@10.8.2",
+  "engines": {
+    "node": ">=20.17.0",
+    "npm": ">=10"
+  },
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "express": "^4.18.2",
-    "framer-motion": "^10.17.9",
-    "node-fetch": "^3.3.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.12.0",
-    "react-scripts": "5.0.1",
-    "react-scroll": "^1.9.0",
-    "react-type-animation": "^3.2.0",
-    "web-vitals": "^2.1.4"
+    "lucide-react": "^1.12.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "dev": "vite",
+    "start": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "typecheck": "tsc -b",
+    "audit": "npm audit",
+    "ci": "npm run validate",
+    "validate": "npm run lint && npm run typecheck && npm run test:run && npm run build"
   },
   "browserslist": {
     "production": [
@@ -42,6 +39,17 @@
     ]
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.0"
+    "@eslint/js": "^9.39.4",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@vitejs/plugin-react": "^4.7.0",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "jsdom": "^26.1.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.1",
+    "vite": "^6.4.2",
+    "vitest": "^3.2.4"
   }
 }
