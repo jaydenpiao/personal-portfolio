@@ -220,7 +220,7 @@ export const portfolio = {
       location: "Sunnyvale, CA",
       dates: "May 2026 - Jul 2026",
       logo: {
-        src: "/logos/google.svg",
+        src: "/logos/google.png",
         alt: "Google logo",
       },
       summary:
@@ -233,7 +233,7 @@ export const portfolio = {
       location: "Seattle, WA",
       dates: "May 2025 - Aug 2025",
       logo: {
-        src: "/logos/aws.svg",
+        src: "/logos/aws.png",
         alt: "Amazon Web Services logo",
       },
       summary:
@@ -250,7 +250,7 @@ export const portfolio = {
       location: "Vancouver, BC",
       dates: "Mar 2024 - Aug 2025",
       logo: {
-        src: "/logos/ubc-mint.svg",
+        src: "/logos/ubc-mint.jpg",
         alt: "UBC MINT logo",
       },
       summary:
@@ -266,7 +266,7 @@ export const portfolio = {
       location: "Remote",
       dates: "May 2024 - Dec 2024",
       logo: {
-        src: "/logos/marr-labs.svg",
+        src: "/logos/marr-labs.jpg",
         alt: "Marr Labs logo",
       },
       summary:
@@ -283,7 +283,7 @@ export const portfolio = {
       location: "Remote",
       dates: "May 2023 - Aug 2023",
       logo: {
-        src: "/logos/the-verse.svg",
+        src: "/logos/the-verse.jpg",
         alt: "The Verse logo",
       },
       summary:
@@ -299,7 +299,7 @@ export const portfolio = {
       location: "Vancouver, BC",
       dates: "Sep 2021 - Aug 2022",
       logo: {
-        src: "/logos/ubc-thunderbots.svg",
+        src: "/logos/ubc-thunderbots.jpg",
         alt: "UBC Thunderbots logo",
       },
       summary:

@@ -1,8 +1,6 @@
 import {
   ArrowUpRight,
-  BriefcaseBusiness,
   CheckCircle2,
-  Code2,
   FileText,
   Mail,
 } from "lucide-react";
@@ -11,31 +9,51 @@ import portraitUrl from "./assets/jayden-palms-portrait.jpg";
 import { portfolio, type ExternalLink, type Project } from "./data/portfolio";
 
 const navigation = [
-  { label: "Experience", href: "#experience" },
-  { label: "Work", href: "#work" },
-  { label: "Skills", href: "#skills" },
-  { label: "Contact", href: "#contact" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Work", href: "/#work" },
+  { label: "Projects", href: "/projects" },
+  { label: "Skills", href: "/#skills" },
+  { label: "Contact", href: "/#contact" },
 ];
 
+const linkLogos = {
+  github: {
+    src: "/logos/github.png",
+    alt: "GitHub logo",
+  },
+  linkedin: {
+    src: "/logos/linkedin.png",
+    alt: "LinkedIn logo",
+  },
+};
+
 function App() {
+  const isProjectsPage = window.location.pathname === "/projects";
+
   return (
     <div className="site-shell">
       <Header />
-      <main>
-        <Hero />
-        <ExperienceSection />
-        <FeaturedProjects />
-        <SkillsSection />
-        <ContactSection />
-      </main>
+      {isProjectsPage ? <ProjectsPage /> : <HomePage />}
     </div>
+  );
+}
+
+function HomePage() {
+  return (
+    <main>
+      <Hero />
+      <ExperienceSection />
+      <FeaturedProjects />
+      <SkillsSection />
+      <ContactSection />
+    </main>
   );
 }
 
 function Header() {
   return (
     <header className="site-header">
-      <a className="brand" href="#top" aria-label="Jayden Piao home">
+      <a className="brand" href="/" aria-label="Jayden Piao home">
         JP
       </a>
       <nav className="nav-links" aria-label="Primary navigation">
@@ -61,13 +79,13 @@ function Hero() {
             href={portfolio.links.github}
             label="GitHub"
             ariaLabel="GitHub profile"
-            icon={<Code2 />}
+            logo={linkLogos.github}
           />
           <IconLink
             href={portfolio.links.linkedin}
             label="LinkedIn"
             ariaLabel="LinkedIn profile"
-            icon={<BriefcaseBusiness />}
+            logo={linkLogos.linkedin}
           />
           <IconLink href={portfolio.links.resume} label="Resume" icon={<FileText />} />
         </div>
@@ -94,16 +112,11 @@ function Hero() {
 }
 
 function FeaturedProjects() {
-  const featuredProjects = portfolio.projects.slice(0, 5);
-  const additionalProjects = portfolio.projects.slice(5);
+  const featuredProjects = portfolio.projects.slice(0, 4);
 
   return (
     <section id="work" className="section-frame section-block">
-      <SectionHeading
-        eyebrow="Selected work"
-        title="Featured engineering projects"
-        summary="Current public work first. Each project is selected for technical depth, product clarity, or evidence-backed engineering process."
-      />
+      <SectionHeading eyebrow="Selected work" title="Featured engineering projects" />
 
       <div className="project-grid" aria-label="Featured projects">
         {featuredProjects.map((project, index) => (
@@ -111,20 +124,32 @@ function FeaturedProjects() {
         ))}
       </div>
 
-      {additionalProjects.length > 0 ? (
-        <div className="secondary-work" aria-label="Additional projects">
-          <h3>Additional work</h3>
-          <div>
-            {additionalProjects.map((project) => (
-              <a key={project.id} href={project.links[0]?.href} target="_blank" rel="noreferrer">
-                <span>{project.name}</span>
-                <ArrowUpRight aria-hidden="true" />
-              </a>
-            ))}
-          </div>
-        </div>
-      ) : null}
+      <a className="more-projects-link" href="/projects">
+        <span>More projects</span>
+        <ArrowUpRight aria-hidden="true" />
+      </a>
     </section>
+  );
+}
+
+function ProjectsPage() {
+  const moreProjects = portfolio.projects.slice(4);
+
+  return (
+    <main>
+      <section className="section-frame section-block projects-page">
+        <SectionHeading eyebrow="Projects" title="More projects" />
+        <div className="project-grid" aria-label="More projects">
+          {moreProjects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
+        <a className="more-projects-link" href="/#work">
+          <span>Back to selected work</span>
+          <ArrowUpRight aria-hidden="true" />
+        </a>
+      </section>
+    </main>
   );
 }
 
@@ -181,7 +206,6 @@ function ExperienceSection() {
       <SectionHeading
         eyebrow="Experience"
         title="Internships and engineering teams"
-        summary="Pulled from my current resume: Google incoming, AWS DynamoDB storage, UBC MINT Rust backend work, Marr Labs voice-agent tooling, The Verse, and UBC Thunderbots."
       />
       <div className="timeline">
         {portfolio.experience.map((item) => (
@@ -220,7 +244,6 @@ function SkillsSection() {
       <SectionHeading
         eyebrow="Tools"
         title="Tools I use most"
-        summary="Mostly TypeScript and React for product UI, Python/Go/Rust for backend systems, and a small set of testing and deploy tools that keep the work clean."
       />
       <div className="tools-layout">
         <aside className="tools-callout" aria-label="Core tools">
@@ -272,13 +295,13 @@ function ContactSection() {
           href={portfolio.links.github}
           label="GitHub"
           ariaLabel="GitHub profile"
-          icon={<Code2 />}
+          logo={linkLogos.github}
         />
         <IconLink
           href={portfolio.links.linkedin}
           label="LinkedIn"
           ariaLabel="LinkedIn profile"
-          icon={<BriefcaseBusiness />}
+          logo={linkLogos.linkedin}
         />
       </div>
     </section>
@@ -292,13 +315,13 @@ function SectionHeading({
 }: {
   eyebrow: string;
   title: string;
-  summary: string;
+  summary?: string;
 }) {
   return (
-    <div className="section-heading">
+    <div className={summary ? "section-heading" : "section-heading section-heading-compact"}>
       <p className="eyebrow">{eyebrow}</p>
       <h2>{title}</h2>
-      <p>{summary}</p>
+      {summary ? <p>{summary}</p> : null}
     </div>
   );
 }
@@ -308,11 +331,16 @@ function IconLink({
   label,
   ariaLabel,
   icon,
+  logo,
 }: {
   href: ExternalLink["href"];
   label: string;
   ariaLabel?: string;
-  icon: ReactNode;
+  icon?: ReactNode;
+  logo?: {
+    src: string;
+    alt: string;
+  };
 }) {
   const external = href.startsWith("http");
 
@@ -325,8 +353,11 @@ function IconLink({
       aria-label={ariaLabel}
     >
       <span className="icon-link-label">{label}</span>
-      <span className="icon-link-mark" aria-hidden="true">
-        {icon}
+      <span
+        className={logo ? "icon-link-mark icon-link-mark-logo" : "icon-link-mark"}
+        aria-hidden="true"
+      >
+        {logo ? <img src={logo.src} alt="" /> : icon}
       </span>
     </a>
   );

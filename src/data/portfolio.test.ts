@@ -45,16 +45,16 @@ describe("portfolio content", () => {
 
   it("provides a local logo asset for every experience entry", () => {
     const expectedLogoSources = [
-      "/logos/google.svg",
-      "/logos/aws.svg",
-      "/logos/ubc-mint.svg",
-      "/logos/marr-labs.svg",
-      "/logos/the-verse.svg",
-      "/logos/ubc-thunderbots.svg",
+      "/logos/google.png",
+      "/logos/aws.png",
+      "/logos/ubc-mint.jpg",
+      "/logos/marr-labs.jpg",
+      "/logos/the-verse.jpg",
+      "/logos/ubc-thunderbots.jpg",
     ];
 
     for (const item of portfolio.experience) {
-      expect(item.logo.src).toMatch(/^\/logos\/.+\.svg$/);
+      expect(item.logo.src).toMatch(/^\/logos\/.+\.(png|jpg)$/);
       expect(item.logo.alt).toMatch(new RegExp(item.company.split(" ")[0], "i"));
     }
 

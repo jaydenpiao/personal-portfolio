@@ -1,8 +1,12 @@
 import { render, screen, within } from "@testing-library/react";
-import { describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it } from "vitest";
 import App from "./App";
 
 describe("portfolio app", () => {
+  afterEach(() => {
+    window.history.pushState({}, "", "/");
+  });
+
   it("renders the updated portfolio narrative and featured project links", () => {
     render(<App />);
 
@@ -38,6 +42,7 @@ describe("portfolio app", () => {
     expect(screen.getByRole("heading", { name: "Google" })).toBeInTheDocument();
     expect(screen.getByAltText("Google logo")).toBeInTheDocument();
     expect(screen.getByAltText("Amazon Web Services logo")).toBeInTheDocument();
+    expect(screen.queryByText(/Pulled from my current resume/i)).not.toBeInTheDocument();
     expect(screen.getByText(/DynamoDB's new LSM-tree storage engine/i)).toBeInTheDocument();
   });
 
@@ -61,6 +66,20 @@ describe("portfolio app", () => {
     expect(screen.getByRole("heading", { name: "Product UI" })).toBeInTheDocument();
     expect(screen.getByText(/TypeScript, React, Python, Go, Rust, AWS/i)).toBeInTheDocument();
     expect(screen.getByText("Playwright")).toBeInTheDocument();
+    expect(screen.queryByText(/Mostly TypeScript and React/i)).not.toBeInTheDocument();
+  });
+
+  it("renders a separate page for the rest of the projects", () => {
+    window.history.pushState({}, "", "/projects");
+    render(<App />);
+
+    expect(screen.getByRole("heading", { name: "More projects" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "AI Closet Planner" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "UBC Poker Club" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /Back to selected work/i })).toHaveAttribute(
+      "href",
+      "/#work",
+    );
   });
 
   it("keeps the contact section direct and human", () => {

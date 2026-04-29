@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-labelledby="title desc">
-  <title id="title">UBC Thunderbots</title>
-  <desc id="desc">UBC Thunderbots logo badge</desc>
-  <rect width="80" height="80" rx="18" fill="#f8fafc"/>
-  <path d="M40 11l28 13v25L40 66 12 49V24z" fill="#002145"/>
-  <path d="M40 20l19 8v16L40 56 21 44V28z" fill="#fff"/>
-  <path d="M37 25h17L43 39h12L34 57l7-15H26z" fill="#f4a261"/>
-</svg>
