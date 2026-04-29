@@ -255,16 +255,31 @@ function SkillsSection() {
 function ContactSection() {
   return (
     <section id="contact" className="section-frame contact-section">
-      <div>
+      <div className="contact-copy">
         <p className="eyebrow">Contact</p>
-        <h2>Useful links for recruiters, collaborators, and future agents.</h2>
+        <h2>Email is best.</h2>
+        <p>
+          For roles, project questions, or anything from GitHub, send a note. I check email more
+          reliably than DMs.
+        </p>
       </div>
-      <div className="contact-actions">
-        <IconLink href={portfolio.links.email} label="Email Jayden" icon={<Mail />} />
-        <IconLink href={portfolio.links.github} label="GitHub profile" icon={<Code2 />} />
+      <div className="contact-actions" aria-label="Contact links">
+        <IconLink
+          href={portfolio.links.email}
+          label="Email"
+          ariaLabel="Email Jayden"
+          icon={<Mail />}
+        />
+        <IconLink
+          href={portfolio.links.github}
+          label="GitHub"
+          ariaLabel="GitHub profile"
+          icon={<Code2 />}
+        />
         <IconLink
           href={portfolio.links.linkedin}
-          label="LinkedIn profile"
+          label="LinkedIn"
+          ariaLabel="LinkedIn profile"
           icon={<BriefcaseBusiness />}
         />
       </div>
@@ -277,7 +292,7 @@ function Footer() {
     <footer className="site-footer">
       <div>
         <TerminalSquare aria-hidden="true" />
-        <span>Agent-ready repo: docs, typed content, tests, and validation scripts.</span>
+        <span>Built with React, TypeScript, Vite, and typed portfolio content.</span>
       </div>
       <a href="#top">Back to top</a>
     </footer>

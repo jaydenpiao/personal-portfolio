@@ -62,4 +62,12 @@ describe("portfolio app", () => {
     expect(screen.getByText(/TypeScript, React, Python, Go, Rust, AWS/i)).toBeInTheDocument();
     expect(screen.getByText("Playwright")).toBeInTheDocument();
   });
+
+  it("keeps the contact section direct and human", () => {
+    render(<App />);
+
+    expect(screen.getByRole("heading", { name: "Email is best." })).toBeInTheDocument();
+    expect(screen.getByText(/I check email more reliably than DMs/i)).toBeInTheDocument();
+    expect(screen.queryByText(/future agents/i)).not.toBeInTheDocument();
+  });
 });
