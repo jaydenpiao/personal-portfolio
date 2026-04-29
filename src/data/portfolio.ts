@@ -48,16 +48,16 @@ export const portfolio = {
   },
   status: [
     {
-      label: "Current focus",
-      value: "AI-agent safety, control planes, and production-grade demos",
+      label: "Recent work",
+      value: "DynamoDB storage at AWS, Rust backend work at UBC MINT, and voice-agent tooling at Marr Labs",
     },
     {
-      label: "Build, test, lint, ship",
-      value: "Vite, React, TypeScript, Vitest, ESLint, GitHub PR workflow",
+      label: "Main stack",
+      value: "TypeScript, React, Python, Go, Rust, FastAPI, Postgres, and AWS",
     },
     {
-      label: "Strongest signal",
-      value: "Systems that expose evidence: logs, checks, health, rollback, and benchmarks",
+      label: "Interests",
+      value: "Backend systems, infrastructure work, developer tools, and practical web apps",
     },
   ],
   projects: [

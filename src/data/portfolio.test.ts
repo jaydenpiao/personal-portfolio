@@ -42,4 +42,17 @@ describe("portfolio content", () => {
     expect(portfolio.experience[0]?.role).toMatch(/Incoming Software Engineer Intern/i);
     expect(portfolio.experience[1]?.bullets.join(" ")).toMatch(/DynamoDB/i);
   });
+
+  it("keeps status cards grounded in concrete work", () => {
+    expect(portfolio.status.map((item) => item.label)).toEqual([
+      "Recent work",
+      "Main stack",
+      "Interests",
+    ]);
+    expect(portfolio.status.map((item) => item.value).join(" ")).toMatch(/DynamoDB storage/i);
+    expect(portfolio.status.map((item) => item.value).join(" ")).toMatch(/voice-agent tooling/i);
+    expect(portfolio.status.map((item) => item.value).join(" ")).not.toMatch(
+      /production-grade demos|strongest signal/i,
+    );
+  });
 });

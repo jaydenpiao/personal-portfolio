@@ -42,8 +42,10 @@ describe("portfolio app", () => {
   it("provides an agent-friendly project status surface", () => {
     render(<App />);
 
-    expect(screen.getByText(/Current focus/i)).toBeInTheDocument();
-    expect(screen.getByText(/Build, test, lint, ship/i)).toBeInTheDocument();
+    expect(screen.getByText(/Recent work/i)).toBeInTheDocument();
+    expect(screen.getByText(/Main stack/i)).toBeInTheDocument();
+    expect(screen.getByText(/DynamoDB storage at AWS/i)).toBeInTheDocument();
+    expect(screen.getByText(/voice-agent tooling at Marr Labs/i)).toBeInTheDocument();
     expect(screen.getAllByRole("link", { name: /GitHub profile/i })[0]).toHaveAttribute(
       "href",
       "https://github.com/jaydenpiao",
