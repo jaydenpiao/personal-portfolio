@@ -37,8 +37,8 @@ export const portfolio = {
     eyebrow: "Software engineer",
     summary:
       "I build reliable software across backend systems, developer tools, and web products, with a focus on clear interfaces, practical workflows, and code that is easy to maintain.",
-    location: "Computer Science at UBC",
-    availability: "Open to software engineering roles and serious product-building work.",
+    location: "UBC Computer Science - Class of 2026",
+    availability: "Backend, infrastructure, and product engineering.",
   },
   links: {
     github: "https://github.com/jaydenpiao",

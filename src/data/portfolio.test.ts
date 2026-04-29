@@ -7,6 +7,8 @@ describe("portfolio content", () => {
     expect(portfolio.hero.summary).toMatch(/reliable software/i);
     expect(portfolio.hero.summary).toMatch(/developer tools/i);
     expect(portfolio.hero.summary).toMatch(/easy to maintain/i);
+    expect(portfolio.hero.location).toBe("UBC Computer Science - Class of 2026");
+    expect(portfolio.hero.availability).toMatch(/Backend, infrastructure, and product/i);
     expect(portfolio.hero.summary).not.toMatch(/third year|junior at UBC/i);
   });
 
