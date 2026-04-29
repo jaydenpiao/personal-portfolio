@@ -8,7 +8,7 @@ import {
   TerminalSquare,
 } from "lucide-react";
 import type { ReactNode } from "react";
-import headshotUrl from "./assets/headshot-optimized.jpg";
+import portraitUrl from "./assets/jayden-suit-cherry-blossoms.jpg";
 import { portfolio, type ExternalLink, type Project } from "./data/portfolio";
 
 const navigation = [
@@ -70,7 +70,7 @@ function Hero() {
       </div>
 
       <aside className="hero-portrait" aria-label="Jayden profile summary">
-        <img src={headshotUrl} alt="Jayden Piao" />
+        <img src={portraitUrl} alt="Jayden Piao" />
         <div className="portrait-caption">
           <span>{portfolio.hero.location}</span>
           <strong>{portfolio.hero.availability}</strong>
