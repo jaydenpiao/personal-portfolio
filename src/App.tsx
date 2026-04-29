@@ -182,8 +182,8 @@ function ExperienceSection() {
     <section id="experience" className="section-frame section-block">
       <SectionHeading
         eyebrow="Experience"
-        title="Practical engineering across AI, product, and teams"
-        summary="Recent internships and team work from the latest resume, weighted toward infrastructure, AI-agent systems, and applied engineering leadership."
+        title="Internships and engineering teams"
+        summary="Pulled from my current resume: Google incoming, AWS DynamoDB storage, UBC MINT Rust backend work, Marr Labs voice-agent tooling, The Verse, and UBC Thunderbots."
       />
       <div className="timeline">
         {portfolio.experience.map((item) => (

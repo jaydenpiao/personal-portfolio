@@ -26,7 +26,7 @@ describe("portfolio app", () => {
     render(<App />);
 
     const experienceHeading = screen.getByRole("heading", {
-      name: /Practical engineering across AI, product, and teams/i,
+      name: /Internships and engineering teams/i,
     });
     const projectsHeading = screen.getByRole("heading", {
       name: /Featured engineering projects/i,
