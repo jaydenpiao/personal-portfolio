@@ -55,6 +55,7 @@ The site should feel like a serious engineering portfolio, not a generic student
 Current design priorities:
 
 - current engineering identity over school-year framing
+- resume-backed experience above project work
 - technical project depth over decorative visuals
 - compact, scannable sections
 - strong mobile layout

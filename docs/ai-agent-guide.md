@@ -17,6 +17,19 @@ npm run test:run
 npm run build
 ```
 
+### Update resume or experience
+
+Edit `portfolio.experience` and `portfolio.links.resume` in `src/data/portfolio.ts`.
+Store the current public resume PDF in `public/jaydenpiao_resume.pdf`.
+
+If experience ordering changes, update `src/data/portfolio.test.ts` and `src/App.test.tsx`.
+
+Run:
+
+```bash
+npm run validate
+```
+
 ### Add or reorder projects
 
 Edit `portfolio.projects` in `src/data/portfolio.ts`.
@@ -76,6 +89,7 @@ npm run audit
 Before submitting a change:
 
 - Content still reflects current work.
+- Experience still reflects the latest resume and appears before projects.
 - Featured projects are ordered by signal strength.
 - Hero copy does not mention stale class-year framing.
 - All external links are intentional.

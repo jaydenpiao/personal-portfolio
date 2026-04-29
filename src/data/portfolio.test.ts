@@ -28,4 +28,15 @@ describe("portfolio content", () => {
       true,
     );
   });
+
+  it("keeps experience aligned with the latest resume", () => {
+    expect(portfolio.links.resume).toBe("/jaydenpiao_resume.pdf");
+    expect(portfolio.experience.map((item) => item.company).slice(0, 3)).toEqual([
+      "Google",
+      "Amazon Web Services (AWS)",
+      "UBC MINT",
+    ]);
+    expect(portfolio.experience[0]?.role).toMatch(/Incoming Software Engineer Intern/i);
+    expect(portfolio.experience[1]?.bullets.join(" ")).toMatch(/DynamoDB/i);
+  });
 });

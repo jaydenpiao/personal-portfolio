@@ -20,6 +20,7 @@ export type Project = {
 export type Experience = {
   company: string;
   role: string;
+  location: string;
   dates: string;
   summary: string;
   bullets: string[];
@@ -43,8 +44,7 @@ export const portfolio = {
     github: "https://github.com/jaydenpiao",
     linkedin: "https://www.linkedin.com/in/jaydenpiao/",
     email: "mailto:jaydenpiao@gmail.com",
-    resume:
-      "https://drive.google.com/file/d/1y4bXWwGK4G06ufyMzc3qq5Y328F1sejU/view?usp=sharing",
+    resume: "/jaydenpiao_resume.pdf",
   },
   status: [
     {
@@ -209,48 +209,74 @@ export const portfolio = {
   ] satisfies Project[],
   experience: [
     {
-      company: "Marr Labs (YC W24)",
-      role: "Software Engineer Intern",
-      dates: "May 2024 - Dec 2024",
+      company: "Google",
+      role: "Incoming Software Engineer Intern",
+      location: "Sunnyvale, CA",
+      dates: "May 2026 - Jul 2026",
       summary:
-        "Built AI and infrastructure tooling for voice-agent workflows, transcript parsing, and evaluation.",
+        "Incoming Cloud SQL intern focused on replication and availability infrastructure.",
+      bullets: ["Cloud SQL - Replication and Availability."],
+    },
+    {
+      company: "Amazon Web Services (AWS)",
+      role: "Software Development Engineer Intern",
+      location: "Seattle, WA",
+      dates: "May 2025 - Aug 2025",
+      summary:
+        "Built Rust storage infrastructure for DynamoDB replication and quorum recovery paths.",
       bullets: [
-        "Improved 7-character code parsing in transcripts from 13% to 87% using GPT-4o, Instructor, and Pydantic.",
-        "Built a Dockerized ECS web app with GitHub Actions CI/CD for exploring TTS voices.",
-        "Created an AI-agent call evaluation framework that measured latency and retrieval accuracy.",
+        "Built a Rust physical replication system for DynamoDB's new LSM-tree storage engine, replacing the logical approach.",
+        "Reduced replica recovery time by 60% and CPU utilization by 50% by streaming byte-level data over custom netcat pipelines using Unix domain sockets and TCP bridges.",
+        "Enabled cross-host replica synchronization and quorum recovery with Paxos-compatible recovery behavior and Linux keyring re-encryption.",
       ],
     },
     {
       company: "UBC MINT",
-      role: "Software Engineer",
-      dates: "Mar 2024 - Present",
+      role: "Software Engineering Lead",
+      location: "Vancouver, BC",
+      dates: "Mar 2024 - Aug 2025",
       summary:
-        "Engineering design team work focused on open neurotechnology tooling and accessible BCI interfaces.",
+        "Led Rust backend work for an open Brain-Computer Interface research platform.",
       bullets: [
-        "Contributed to an open-source BCI interface using Rust, SQL, and Next.js.",
-        "Worked on tooling intended to make EEG headset research more accessible and collaborative.",
+        "Led backend development in Rust for a BCI, simulating EEG signal processing for real-time neural data pipelines.",
+        "Engineered high-frequency time-series EEG data flows with simulated signal generation for asynchronous scientific-computing workflows.",
       ],
     },
     {
-      company: "UBC Poker Club",
-      role: "Software Developer",
-      dates: "Jun 2023 - Present",
+      company: "Marr Labs (YC W24)",
+      role: "Software Engineer Intern",
+      location: "Remote",
+      dates: "May 2024 - Dec 2024",
       summary:
-        "Maintained the club website and event-facing surfaces for a large student poker community.",
+        "Built AI-agent evaluation, observability, and infrastructure tooling for text and voice workflows.",
       bullets: [
-        "Built responsive event and inquiry surfaces for 150+ player tournament registration.",
-        "Coordinated website content and design changes with internal stakeholders.",
+        "Designed and implemented evaluation frameworks for text and voice AI agents using observability and automation principles.",
+        "Integrated RESTful tools and visualization features that surfaced performance regressions and reduced manual testing by hours per engineer.",
+        "Developed scalable systems using Docker, FastAPI, and AWS ECS for team-wide agent adoption and iterative ML workflows.",
       ],
     },
     {
       company: "The Verse",
       role: "Software Engineer Intern",
+      location: "Remote",
       dates: "May 2023 - Aug 2023",
       summary:
-        "Built MERN and Python tooling for music-analysis products and internal operations.",
+        "Built MERN products and internal tooling for music-analysis workflows and operations.",
       bullets: [
-        "Developed U4Ea Labels, a MERN app that generated music-analysis artwork for 37,000+ customers.",
-        "Used Musixmatch, Python, and Flask for lyric retrieval and sound-frequency generation.",
+        "Developed U4Ea Labels, a MERN app that performs sentiment music analysis and uses DALL-E to generate nutritional-label artwork for 37K+ customers.",
+        "Built a MERN internal management tool with OAuth accounts and a JavaScript Discord bot for automated activity monitoring.",
+      ],
+    },
+    {
+      company: "UBC Thunderbots",
+      role: "Software Engineer",
+      location: "Vancouver, BC",
+      dates: "Sep 2021 - Aug 2022",
+      summary:
+        "Built real-time robotics control and decision-making systems for a RoboCup Small Size League team.",
+      bullets: [
+        "Developed low-latency C++ robotics control systems on Ubuntu.",
+        "Engineered a Python referee using TensorFlow models, improving real-time decision-making by 30%.",
       ],
     },
   ] satisfies Experience[],

@@ -21,6 +21,8 @@ Avoid stale wording:
 
 ## Strongest Current Projects
 
+Experience should appear before projects. Keep `portfolio.experience` aligned with the latest resume PDF in `public/jaydenpiao_resume.pdf`.
+
 Feature these first unless the user says otherwise:
 
 1. Quorum - AI-agent control plane with policy-gated execution, quorum voting, health checks, rollback, and tamper-evident event logs.

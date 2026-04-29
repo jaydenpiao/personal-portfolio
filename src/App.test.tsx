@@ -22,6 +22,23 @@ describe("portfolio app", () => {
     expect(within(featured).queryByRole("heading", { name: "ATM" })).not.toBeInTheDocument();
   });
 
+  it("places experience before featured project work", () => {
+    render(<App />);
+
+    const experienceHeading = screen.getByRole("heading", {
+      name: /Practical engineering across AI, product, and teams/i,
+    });
+    const projectsHeading = screen.getByRole("heading", {
+      name: /Featured engineering projects/i,
+    });
+
+    expect(experienceHeading.compareDocumentPosition(projectsHeading)).toBe(
+      Node.DOCUMENT_POSITION_FOLLOWING,
+    );
+    expect(screen.getByRole("heading", { name: "Google" })).toBeInTheDocument();
+    expect(screen.getByText(/DynamoDB's new LSM-tree storage engine/i)).toBeInTheDocument();
+  });
+
   it("provides an agent-friendly project status surface", () => {
     render(<App />);
 

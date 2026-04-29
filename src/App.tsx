@@ -12,8 +12,8 @@ import portraitUrl from "./assets/jayden-suit-cherry-blossoms.jpg";
 import { portfolio, type ExternalLink, type Project } from "./data/portfolio";
 
 const navigation = [
-  { label: "Work", href: "#work" },
   { label: "Experience", href: "#experience" },
+  { label: "Work", href: "#work" },
   { label: "Skills", href: "#skills" },
   { label: "Contact", href: "#contact" },
 ];
@@ -24,8 +24,8 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <FeaturedProjects />
         <ExperienceSection />
+        <FeaturedProjects />
         <SkillsSection />
         <ContactSection />
       </main>
@@ -177,7 +177,7 @@ function ExperienceSection() {
       <SectionHeading
         eyebrow="Experience"
         title="Practical engineering across AI, product, and teams"
-        summary="The experience section is intentionally compact so the project work carries more signal."
+        summary="Recent internships and team work from the latest resume, weighted toward infrastructure, AI-agent systems, and applied engineering leadership."
       />
       <div className="timeline">
         {portfolio.experience.map((item) => (
@@ -188,7 +188,10 @@ function ExperienceSection() {
                 <h3>{item.company}</h3>
                 <span>{item.dates}</span>
               </div>
-              <p className="timeline-role">{item.role}</p>
+              <p className="timeline-role">
+                {item.role}
+                {item.location ? ` | ${item.location}` : ""}
+              </p>
               <p>{item.summary}</p>
               <ul>
                 {item.bullets.map((bullet) => (

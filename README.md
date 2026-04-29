@@ -51,8 +51,8 @@ Most content lives in [src/data/portfolio.ts](src/data/portfolio.ts):
 - `hero`: headline, positioning, primary profile details
 - `links`: canonical GitHub, LinkedIn, email, and resume links
 - `status`: small operational signal cards
-- `projects`: selected work, ordered by current strength
 - `experience`: compact resume-style timeline
+- `projects`: selected work, ordered by current strength
 - `skillGroups`: grouped capabilities
 
 Update content there first. Layout and styling live in [src/App.tsx](src/App.tsx) and [src/index.css](src/index.css).
