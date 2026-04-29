@@ -69,5 +69,7 @@ describe("portfolio app", () => {
     expect(screen.getByRole("heading", { name: "Email is best." })).toBeInTheDocument();
     expect(screen.getByText(/I check email more reliably than DMs/i)).toBeInTheDocument();
     expect(screen.queryByText(/future agents/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/Agent-ready repo/i)).not.toBeInTheDocument();
+    expect(screen.queryByRole("link", { name: /Back to top/i })).not.toBeInTheDocument();
   });
 });

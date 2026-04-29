@@ -5,7 +5,6 @@ import {
   Code2,
   FileText,
   Mail,
-  TerminalSquare,
 } from "lucide-react";
 import type { ReactNode } from "react";
 import portraitUrl from "./assets/jayden-palms-portrait.jpg";
@@ -29,7 +28,6 @@ function App() {
         <SkillsSection />
         <ContactSection />
       </main>
-      <Footer />
     </div>
   );
 }
@@ -284,18 +282,6 @@ function ContactSection() {
         />
       </div>
     </section>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="site-footer">
-      <div>
-        <TerminalSquare aria-hidden="true" />
-        <span>Built with React, TypeScript, Vite, and typed portfolio content.</span>
-      </div>
-      <a href="#top">Back to top</a>
-    </footer>
   );
 }
 
