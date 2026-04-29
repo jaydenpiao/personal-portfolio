@@ -62,6 +62,6 @@ Current design priorities:
 
 ## Known External State
 
-- The GitHub repository homepage metadata points at `https://jaydenpiao.tech/`.
-- DNS for `jaydenpiao.tech` did not resolve from the local environment during the 2026-04-28 revamp.
-- Verify deployment/DNS separately before claiming the public site is live.
+- The canonical public site is `https://jaydenpiao.netlify.app/`.
+- Do not replace it with an old custom domain.
+- Verify Netlify deployment health before claiming a new change is live.

@@ -99,4 +99,4 @@ Suggested PR title format:
 [codex] <short description>
 ```
 
-The repository metadata references `https://jaydenpiao.tech/`, but DNS should be verified before treating that as the active deployment.
+The canonical public site is `https://jaydenpiao.netlify.app/`. Do not replace it with an old custom domain.

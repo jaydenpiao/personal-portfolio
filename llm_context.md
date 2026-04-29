@@ -70,4 +70,5 @@ npm run audit
 - Keep content changes data-driven.
 - Do not reintroduce Create React App.
 - Do not reintroduce Tailwind unless there is a clear reason and tests/build remain clean.
-- Do not claim `jaydenpiao.tech` is live without checking DNS/deployment.
+- The canonical public site is `https://jaydenpiao.netlify.app/`.
+- Do not replace it with an old custom domain.
