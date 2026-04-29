@@ -178,35 +178,68 @@ h3 {
 }
 
 .icon-link {
-  display: inline-flex;
+  display: inline-grid;
+  grid-template-columns: minmax(0, auto) 30px;
   align-items: center;
-  gap: 8px;
-  min-height: 42px;
-  padding: 10px 14px;
-  border: 1px solid var(--line);
+  gap: 12px;
+  min-height: 46px;
+  padding: 6px 6px 6px 17px;
+  border: 1px solid color-mix(in srgb, var(--line), #94a3b8 22%);
   border-radius: 999px;
-  background: var(--paper);
+  background:
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 100%),
+    var(--paper);
   color: var(--ink);
-  font-size: 0.93rem;
-  font-weight: 800;
-  box-shadow: 0 8px 24px rgb(15 23 42 / 6%);
+  font-size: 0.91rem;
+  font-weight: 850;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow:
+    0 12px 28px rgb(15 23 42 / 7%),
+    inset 0 1px 0 rgb(255 255 255 / 90%);
   transition:
     transform 160ms ease,
     border-color 160ms ease,
-    background-color 160ms ease;
+    background-color 160ms ease,
+    box-shadow 160ms ease;
 }
 
-.icon-link svg {
-  width: 17px;
-  height: 17px;
+.icon-link-label {
+  min-width: 0;
+}
+
+.icon-link-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #111827;
+  color: white;
+  box-shadow: 0 6px 14px rgb(15 23 42 / 18%);
+}
+
+.icon-link-mark svg {
+  width: 15px;
+  height: 15px;
+  stroke-width: 2.3;
 }
 
 .icon-link:hover,
 .icon-link:focus-visible {
-  border-color: var(--ink);
+  border-color: color-mix(in srgb, var(--ink), var(--line) 18%);
   background: #f9fafb;
-  transform: translateY(-1px);
+  box-shadow:
+    0 16px 34px rgb(15 23 42 / 12%),
+    inset 0 1px 0 rgb(255 255 255 / 90%);
+  transform: translateY(-2px);
   outline: none;
+}
+
+.icon-link:hover .icon-link-mark,
+.icon-link:focus-visible .icon-link-mark {
+  background: var(--teal);
 }
 
 .hero-portrait {

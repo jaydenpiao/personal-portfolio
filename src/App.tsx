@@ -59,10 +59,16 @@ function Hero() {
         <h1>{portfolio.hero.title}</h1>
         <p className="hero-summary">{portfolio.hero.summary}</p>
         <div className="hero-actions" aria-label="Primary links">
-          <IconLink href={portfolio.links.github} label="GitHub profile" icon={<Code2 />} />
+          <IconLink
+            href={portfolio.links.github}
+            label="GitHub"
+            ariaLabel="GitHub profile"
+            icon={<Code2 />}
+          />
           <IconLink
             href={portfolio.links.linkedin}
-            label="LinkedIn profile"
+            label="LinkedIn"
+            ariaLabel="LinkedIn profile"
             icon={<BriefcaseBusiness />}
           />
           <IconLink href={portfolio.links.resume} label="Resume" icon={<FileText />} />
@@ -283,18 +289,28 @@ function SectionHeading({
 function IconLink({
   href,
   label,
+  ariaLabel,
   icon,
 }: {
   href: ExternalLink["href"];
   label: string;
+  ariaLabel?: string;
   icon: ReactNode;
 }) {
   const external = href.startsWith("http");
 
   return (
-    <a className="icon-link" href={href} target={external ? "_blank" : undefined} rel="noreferrer">
-      <span>{label}</span>
-      {icon}
+    <a
+      className="icon-link"
+      href={href}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noreferrer" : undefined}
+      aria-label={ariaLabel}
+    >
+      <span className="icon-link-label">{label}</span>
+      <span className="icon-link-mark" aria-hidden="true">
+        {icon}
+      </span>
     </a>
   );
 }
