@@ -12,7 +12,7 @@ describe("portfolio app", () => {
         level: 1,
       }),
     ).toBeInTheDocument();
-    expect(screen.getByText(/AI systems, developer tools/i)).toBeInTheDocument();
+    expect(screen.getByText(/reliable software across backend systems/i)).toBeInTheDocument();
 
     const featured = screen.getByLabelText("Featured projects");
     expect(within(featured).getByRole("heading", { name: "Quorum" })).toBeInTheDocument();

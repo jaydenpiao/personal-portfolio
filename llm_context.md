@@ -2,7 +2,7 @@
 
 ## Project Purpose
 
-This is Jayden Piao's personal portfolio. It should present Jayden as a software engineer focused on AI systems, developer tools, distributed systems, and polished product web apps.
+This is Jayden Piao's personal portfolio. It should present Jayden as a software engineer focused on reliable backend systems, developer tools, distributed systems, and polished product web apps.
 
 The previous site was a 2023-2024 Create React App portfolio with hardcoded JSX, stale class-year copy, old hackathon projects, and unused dependencies. The current direction is a smaller Vite/TypeScript app with typed content and clear validation gates.
 
@@ -10,7 +10,7 @@ The previous site was a 2023-2024 Create React App portfolio with hardcoded JSX,
 
 Use this framing when updating copy:
 
-> Jayden builds AI systems, developer tools, distributed-systems experiments, and product-focused web apps with clean interfaces, observable behavior, and reliable handoffs.
+> Jayden builds reliable software across backend systems, developer tools, and web products, with a focus on clear interfaces, practical workflows, and code that is easy to maintain.
 
 Avoid stale wording:
 

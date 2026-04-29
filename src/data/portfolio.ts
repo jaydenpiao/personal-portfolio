@@ -36,7 +36,7 @@ export const portfolio = {
     title: "Jayden Piao",
     eyebrow: "Software engineer",
     summary:
-      "AI systems, developer tools, distributed-systems experiments, and product-focused web apps built with clean interfaces, observable behavior, and reliable handoffs.",
+      "I build reliable software across backend systems, developer tools, and web products, with a focus on clear interfaces, practical workflows, and code that is easy to maintain.",
     location: "Computer Science at UBC",
     availability: "Open to software engineering roles and serious product-building work.",
   },
