@@ -38,14 +38,19 @@ describe("portfolio content", () => {
     expect(portfolio.projects.map((project) => project.id)).toEqual(
       expect.arrayContaining([
         "vita",
+        "parameter-golf",
+        "macro-place-challenge",
+        "phonetic-ai",
         "recipe-meal-planner",
         "customer-service-chatbot",
         "u4ea-labels",
+        "album-nutrition",
         "asl-translator",
         "chatgpt-clone",
+        "atm-machine",
       ]),
     );
-    expect(portfolio.projects.length).toBeGreaterThanOrEqual(12);
+    expect(portfolio.projects.length).toBeGreaterThanOrEqual(17);
   });
 
   it("keeps project descriptions specific and technical", () => {

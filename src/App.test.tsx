@@ -103,9 +103,14 @@ describe("portfolio app", () => {
 
     expect(screen.getByRole("heading", { name: "More projects" })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: "AI Closet Planner" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Parameter Golf" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Macro Placement Challenge" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "PhoneticAI" })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: "UBC Poker Club" })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: "Vita" })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: "Customer Service Chatbot" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Album Nutrition" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "ATM Machine" })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /Back to selected work/i })).toHaveAttribute(
       "href",
       "/#work",

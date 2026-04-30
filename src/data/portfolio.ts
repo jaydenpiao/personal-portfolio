@@ -211,6 +211,75 @@ export const portfolio = {
       },
     },
     {
+      id: "parameter-golf",
+      name: "Parameter Golf",
+      eyebrow: "Compact model research",
+      summary:
+        "Public fork/workspace for OpenAI Parameter Golf: compact language-model experiments under a 16MB artifact budget, with reproducible run records and submission configs.",
+      impact: [
+        "Tracked ternary, FP8, sliding-window, and tokenizer experiments through named run records",
+        "Kept configs, training scripts, submission JSON, logs, and result notes together for reproducible comparisons",
+        "Validated artifact-size and BPB tradeoffs against the challenge constraints",
+      ],
+      stack: ["Python", "PyTorch", "CUDA", "H100", "Tokenization", "Experiment tracking"],
+      links: [
+        {
+          label: "Repository",
+          href: "https://github.com/jaydenpiao/parameter-golf",
+        },
+      ],
+      visual: {
+        label: "model budget",
+        lines: ["16MB cap", "train config", "artifact", "BPB score", "run log"],
+      },
+    },
+    {
+      id: "macro-place-challenge",
+      name: "Macro Placement Challenge",
+      eyebrow: "EDA optimization",
+      summary:
+        "Public fork/workspace for the HRT/Partcl macro-placement challenge with deterministic placement code, benchmark evaluation, local/cloud configs, and OpenROAD integration notes.",
+      impact: [
+        "Implemented the submissions/jaydenpiao placer entry point with deterministic runtime knobs",
+        "Kept benchmark metadata, result schemas, and smoke tests around the placement workflow",
+        "Documented cloud parity and agent handoff notes for repeatable Linux validation",
+      ],
+      stack: ["Python", "EDA", "OpenROAD", "Docker", "PyTorch", "Optimization"],
+      links: [
+        {
+          label: "Repository",
+          href: "https://github.com/jaydenpiao/macro-place-challenge-2026",
+        },
+      ],
+      visual: {
+        label: "placement loop",
+        lines: ["benchmarks", "macros", "legalize", "wirelength", "score"],
+      },
+    },
+    {
+      id: "phonetic-ai",
+      name: "PhoneticAI",
+      eyebrow: "Voice-agent CRM",
+      summary:
+        "NwHacks voice-agent CRM prototype with a React dashboard, FastAPI backend, MySQL data model, Retell phone-call webhooks, and OpenAI transcript parsing for call summaries and events.",
+      impact: [
+        "Pulled agents, contacts, calls, events, and statistics into a dashboard UI",
+        "Parsed call transcripts into sentiment, summaries, and calendar event objects",
+        "Connected Retell call-status callbacks to persistent contact and call records",
+      ],
+      stack: ["React", "FastAPI", "MySQL", "OpenAI", "Retell", "Tailwind CSS"],
+      links: [
+        {
+          label: "Repository",
+          href: "https://github.com/jaydenpiao/PhoneticAI",
+        },
+      ],
+      visual: {
+        label: "call workflow",
+        lines: ["phone call", "webhook", "transcript", "event parse", "CRM update"],
+      },
+    },
+    {
       id: "ubc-poker",
       name: "UBC Poker Club",
       eyebrow: "Production club site",
@@ -329,6 +398,29 @@ export const portfolio = {
       },
     },
     {
+      id: "album-nutrition",
+      name: "Album Nutrition",
+      eyebrow: "Music data tooling",
+      summary:
+        "Python and Figma-plugin project that turns album lyrics into frequency counts and nutrition-label-style artwork data.",
+      impact: [
+        "Stored lyric datasets and generated JSON frequency outputs across albums",
+        "Filtered stop words and counted terms for label-ready summaries",
+        "Used a Figma plugin path to populate design templates from analysis results",
+      ],
+      stack: ["Python", "JavaScript", "Figma Plugin API", "Text processing", "Data visualization"],
+      links: [
+        {
+          label: "Repository",
+          href: "https://github.com/jaydenpiao/albumnutrition",
+        },
+      ],
+      visual: {
+        label: "album label",
+        lines: ["lyrics", "stop words", "term counts", "JSON", "Figma layer"],
+      },
+    },
+    {
       id: "asl-translator",
       name: "ASL Translator",
       eyebrow: "Hackathon ML",
@@ -371,6 +463,29 @@ export const portfolio = {
       visual: {
         label: "chat stack",
         lines: ["React UI", "auth token", "Express API", "MongoDB", "OpenAI call"],
+      },
+    },
+    {
+      id: "atm-machine",
+      name: "ATM Machine",
+      eyebrow: "Java desktop app",
+      summary:
+        "Java desktop banking simulator with account creation, deposit/withdraw flows, suspend/remove actions, JSON save/load, UI feedback, and refactoring notes.",
+      impact: [
+        "Modeled chequing and savings account flows with persistent account lists",
+        "Added save/load behavior and event logging for account operations",
+        "Documented UML and refactoring tradeoffs around duplication and UI coupling",
+      ],
+      stack: ["Java", "Swing", "JSON", "OOP", "Persistence"],
+      links: [
+        {
+          label: "Repository",
+          href: "https://github.com/jaydenpiao/ATM",
+        },
+      ],
+      visual: {
+        label: "banking flow",
+        lines: ["create", "deposit", "withdraw", "save", "load"],
       },
     },
   ] satisfies Project[],

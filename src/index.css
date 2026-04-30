@@ -421,13 +421,14 @@ h3 {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 520px), 1fr));
   gap: 16px;
 }
 
 .project-card {
   display: grid;
   grid-template-columns: minmax(190px, 0.46fr) minmax(0, 1fr);
+  min-width: 0;
   overflow: hidden;
   box-shadow: 0 14px 40px rgb(15 23 42 / 8%);
 }
@@ -471,6 +472,7 @@ h3 {
 }
 
 .project-content {
+  min-width: 0;
   padding: 24px;
 }
 
@@ -538,6 +540,16 @@ h3 {
 
 .projects-page {
   padding-bottom: 54px;
+}
+
+.projects-page .project-grid {
+  grid-template-columns: 1fr;
+}
+
+@media (max-width: 1120px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .timeline {
