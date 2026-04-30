@@ -30,6 +30,19 @@ export type Experience = {
   bullets: string[];
 };
 
+export type Education = {
+  school: string;
+  program: string;
+  dates: string;
+  location: string;
+  logo: {
+    src: string;
+    alt: string;
+  };
+  summary: string;
+  focus: string[];
+};
+
 export type SkillGroup = {
   name: string;
   primary: string;
@@ -43,9 +56,20 @@ export const portfolio = {
     eyebrow: "Software engineer",
     summary:
       "I'm a fourth-year Computer Science student at UBC. I've worked on distributed systems, DynamoDB storage infrastructure, core product features, and LLM and voice-agent tooling. I like building practical software that solves hard technical problems.",
-    location: "UBC Computer Science - Class of 2026",
-    availability: "Backend, infrastructure, and product engineering.",
   },
+  education: {
+    school: "University of British Columbia",
+    program: "Computer Science",
+    dates: "Class of 2026",
+    location: "Vancouver, BC",
+    logo: {
+      src: "/logos/ubc-monogram.svg",
+      alt: "UBC education monogram",
+    },
+    summary:
+      "Fourth-year Computer Science student focused on backend systems, infrastructure, and product engineering.",
+    focus: ["Distributed systems", "Systems programming", "AI/LLM tooling", "Product engineering"],
+  } satisfies Education,
   links: {
     github: "https://github.com/jaydenpiao",
     linkedin: "https://www.linkedin.com/in/jaydenpiao/",

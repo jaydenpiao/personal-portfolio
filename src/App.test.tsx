@@ -27,6 +27,26 @@ describe("portfolio app", () => {
     expect(within(featured).queryByRole("heading", { name: "ATM" })).not.toBeInTheDocument();
   });
 
+  it("renders education as its own section instead of a portrait caption", () => {
+    render(<App />);
+
+    const educationHeading = screen.getByRole("heading", { name: "UBC Computer Science" });
+    const experienceHeading = screen.getByRole("heading", {
+      name: /Internships and engineering teams/i,
+    });
+
+    expect(educationHeading.compareDocumentPosition(experienceHeading)).toBe(
+      Node.DOCUMENT_POSITION_FOLLOWING,
+    );
+    expect(screen.getByAltText("UBC education monogram")).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: "University of British Columbia" }),
+    ).toBeInTheDocument();
+    expect(screen.getByText("Computer Science")).toBeInTheDocument();
+    expect(screen.getByText("Class of 2026")).toBeInTheDocument();
+    expect(screen.queryByText("UBC Computer Science - Class of 2026")).not.toBeInTheDocument();
+  });
+
   it("places experience before featured project work", () => {
     render(<App />);
 

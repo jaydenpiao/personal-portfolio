@@ -9,6 +9,7 @@ import portraitUrl from "./assets/jayden-palms-portrait.jpg";
 import { portfolio, type ExternalLink, type Project } from "./data/portfolio";
 
 const navigation = [
+  { label: "Education", href: "/#education" },
   { label: "Experience", href: "/#experience" },
   { label: "Work", href: "/#work" },
   { label: "Projects", href: "/projects" },
@@ -42,6 +43,7 @@ function HomePage() {
   return (
     <main>
       <Hero />
+      <EducationSection />
       <ExperienceSection />
       <FeaturedProjects />
       <SkillsSection />
@@ -91,12 +93,8 @@ function Hero() {
         </div>
       </div>
 
-      <aside className="hero-portrait" aria-label="Jayden profile summary">
+      <aside className="hero-portrait" aria-label="Jayden portrait">
         <img src={portraitUrl} alt="Jayden Piao" />
-        <div className="portrait-caption">
-          <span>{portfolio.hero.location}</span>
-          <strong>{portfolio.hero.availability}</strong>
-        </div>
       </aside>
 
       <div className="status-strip" aria-label="Project status">
@@ -107,6 +105,33 @@ function Hero() {
           </article>
         ))}
       </div>
+    </section>
+  );
+}
+
+function EducationSection() {
+  const { education } = portfolio;
+
+  return (
+    <section id="education" className="section-frame section-block education-section">
+      <SectionHeading eyebrow="Education" title="UBC Computer Science" />
+      <article className="education-card">
+        <div className="education-logo-panel">
+          <img src={education.logo.src} alt={education.logo.alt} loading="lazy" />
+        </div>
+        <div className="education-content">
+          <p className="education-meta">{education.program}</p>
+          <h3>{education.school}</h3>
+          <p>{education.summary}</p>
+          <div className="education-details" aria-label="Education details">
+            <span>{education.dates}</span>
+            <span>{education.location}</span>
+            {education.focus.map((item) => (
+              <span key={item}>{item}</span>
+            ))}
+          </div>
+        </div>
+      </article>
     </section>
   );
 }

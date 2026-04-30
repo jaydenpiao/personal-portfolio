@@ -8,9 +8,20 @@ describe("portfolio content", () => {
     expect(portfolio.hero.summary).toMatch(/distributed systems/i);
     expect(portfolio.hero.summary).toMatch(/DynamoDB storage infrastructure/i);
     expect(portfolio.hero.summary).toMatch(/LLM and voice-agent tooling/i);
-    expect(portfolio.hero.location).toBe("UBC Computer Science - Class of 2026");
-    expect(portfolio.hero.availability).toMatch(/Backend, infrastructure, and product/i);
     expect(portfolio.hero.summary).not.toMatch(/third year|junior at UBC/i);
+  });
+
+  it("keeps education separate from the hero portrait card", () => {
+    expect(portfolio.education.school).toBe("University of British Columbia");
+    expect(portfolio.education.program).toBe("Computer Science");
+    expect(portfolio.education.dates).toBe("Class of 2026");
+    expect(portfolio.education.logo.src).toBe("/logos/ubc-monogram.svg");
+    expect(portfolio.education.focus).toEqual([
+      "Distributed systems",
+      "Systems programming",
+      "AI/LLM tooling",
+      "Product engineering",
+    ]);
   });
 
   it("features the strongest recent public engineering projects first", () => {
