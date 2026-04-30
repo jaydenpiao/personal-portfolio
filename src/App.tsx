@@ -4,7 +4,7 @@ import {
   FileText,
   Mail,
 } from "lucide-react";
-import type { ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
 import portraitUrl from "./assets/jayden-palms-portrait.jpg";
 import { portfolio, type ExternalLink, type Project } from "./data/portfolio";
 
@@ -31,12 +31,40 @@ const linkLogos = {
 function App() {
   const isProjectsPage = window.location.pathname === "/projects";
 
+  useHashScroll(isProjectsPage);
+
   return (
     <div className="site-shell">
       <Header />
       {isProjectsPage ? <ProjectsPage /> : <HomePage />}
     </div>
   );
+}
+
+function useHashScroll(isProjectsPage: boolean) {
+  useEffect(() => {
+    if (isProjectsPage || !window.location.hash) {
+      return;
+    }
+
+    const target = document.getElementById(getHashId(window.location.hash));
+
+    if (typeof target?.scrollIntoView !== "function") {
+      return;
+    }
+
+    target.scrollIntoView({ block: "start" });
+  }, [isProjectsPage]);
+}
+
+function getHashId(hash: string) {
+  const rawId = hash.replace(/^#/, "");
+
+  try {
+    return decodeURIComponent(rawId);
+  } catch {
+    return rawId;
+  }
 }
 
 function HomePage() {

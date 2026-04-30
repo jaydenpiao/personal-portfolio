@@ -1,10 +1,19 @@
 import { render, screen, within } from "@testing-library/react";
-import { afterEach, describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import App from "./App";
+
+const originalScrollIntoView = window.HTMLElement.prototype.scrollIntoView;
 
 describe("portfolio app", () => {
   afterEach(() => {
     window.history.pushState({}, "", "/");
+    vi.restoreAllMocks();
+
+    if (originalScrollIntoView) {
+      window.HTMLElement.prototype.scrollIntoView = originalScrollIntoView;
+    } else {
+      Reflect.deleteProperty(window.HTMLElement.prototype, "scrollIntoView");
+    }
   });
 
   it("renders the updated portfolio narrative and featured project links", () => {
@@ -115,6 +124,17 @@ describe("portfolio app", () => {
       "href",
       "/#work",
     );
+  });
+
+  it("scrolls to selected work when opening the home page with the work hash", () => {
+    const scrollIntoView = vi.fn();
+    window.HTMLElement.prototype.scrollIntoView = scrollIntoView;
+    window.history.pushState({}, "", "/#work");
+
+    render(<App />);
+
+    expect(screen.getByRole("heading", { name: /Featured engineering projects/i })).toBeInTheDocument();
+    expect(scrollIntoView).toHaveBeenCalledWith({ block: "start" });
   });
 
   it("keeps the contact section direct and human", () => {
