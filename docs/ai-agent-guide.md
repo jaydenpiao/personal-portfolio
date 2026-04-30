@@ -72,6 +72,22 @@ npm run validate
 npm run audit
 ```
 
+### Update deployment settings
+
+Edit `netlify.toml`.
+
+Netlify should build with:
+
+```bash
+npm run build
+```
+
+and publish:
+
+```text
+dist
+```
+
 ## File Boundaries
 
 | File | Responsibility |
@@ -83,6 +99,7 @@ npm run audit
 | `src/data/portfolio.test.ts` | Content expectations and featured order |
 | `AGENTS.md` | Short instructions for future agents |
 | `llm_context.md` | Longer project context and copy direction |
+| `netlify.toml` | Netlify build command, publish directory, and Node version |
 
 ## Review Checklist
 

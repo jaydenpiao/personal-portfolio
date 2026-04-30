@@ -44,6 +44,14 @@ Security audit:
 npm run audit
 ```
 
+## Deployment
+
+Netlify is configured through [netlify.toml](netlify.toml):
+
+- build command: `npm run build`
+- publish directory: `dist`
+- Node version: `20.17.0`
+
 ## Content Model
 
 Most content lives in [src/data/portfolio.ts](src/data/portfolio.ts):
