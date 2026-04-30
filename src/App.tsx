@@ -213,9 +213,8 @@ function ProjectCard({ project, prominent = false }: { project: Project; promine
             <IconLink
               key={link.href}
               href={link.href}
-              label={`${link.label === "Repository" ? "Open" : "Open"} ${project.name} ${
-                link.label === "Repository" ? "repository" : link.label.toLowerCase()
-              }`}
+              label={getProjectLinkLabel(link)}
+              ariaLabel={getProjectLinkAriaLabel(project, link)}
               icon={<ArrowUpRight />}
             />
           ))}
@@ -223,6 +222,22 @@ function ProjectCard({ project, prominent = false }: { project: Project; promine
       </div>
     </article>
   );
+}
+
+function getProjectLinkLabel(link: ExternalLink) {
+  if (link.label === "Repository") {
+    return "Code";
+  }
+
+  return link.label;
+}
+
+function getProjectLinkAriaLabel(project: Project, link: ExternalLink) {
+  if (link.label === "Repository") {
+    return `Open ${project.name} source code`;
+  }
+
+  return `Open ${project.name} ${link.label.toLowerCase()}`;
 }
 
 function ExperienceSection() {

@@ -34,6 +34,20 @@ describe("portfolio content", () => {
     ]);
   });
 
+  it("includes a deeper set of public GitHub projects on the projects page", () => {
+    expect(portfolio.projects.map((project) => project.id)).toEqual(
+      expect.arrayContaining([
+        "vita",
+        "recipe-meal-planner",
+        "customer-service-chatbot",
+        "u4ea-labels",
+        "asl-translator",
+        "chatgpt-clone",
+      ]),
+    );
+    expect(portfolio.projects.length).toBeGreaterThanOrEqual(12);
+  });
+
   it("keeps project descriptions specific and technical", () => {
     const quorum = portfolio.projects.find((project) => project.id === "quorum");
 
@@ -61,6 +75,7 @@ describe("portfolio content", () => {
       "/logos/aws.png",
       "/logos/ubc-mint.jpg",
       "/logos/marr-labs.jpg",
+      "/logos/ubc-poker.png",
       "/logos/the-verse.jpg",
       "/logos/ubc-thunderbots.jpg",
     ];
@@ -71,6 +86,9 @@ describe("portfolio content", () => {
     }
 
     expect(portfolio.experience.map((item) => item.logo.src)).toEqual(expectedLogoSources);
+    expect(portfolio.experience.find((item) => item.company === "UBC Poker Club")?.summary).toMatch(
+      /public website/i,
+    );
   });
 
   it("keeps status cards grounded in concrete work", () => {

@@ -21,9 +21,15 @@ describe("portfolio app", () => {
 
     const featured = screen.getByLabelText("Featured projects");
     expect(within(featured).getByRole("heading", { name: "Quorum" })).toBeInTheDocument();
-    expect(
-      within(featured).getByRole("link", { name: /open quorum repository/i }),
-    ).toHaveAttribute("href", "https://github.com/jaydenpiao/quorum");
+    const quorumCodeLink = within(featured).getByRole("link", {
+      name: /open quorum source code/i,
+    });
+
+    expect(quorumCodeLink).toHaveAttribute("href", "https://github.com/jaydenpiao/quorum");
+    expect(quorumCodeLink).toHaveTextContent("Code");
+    expect(within(featured).getByRole("link", { name: /open 3D-Viz-Tool demo/i })).toHaveTextContent(
+      "Demo",
+    );
     expect(within(featured).queryByRole("heading", { name: "ATM" })).not.toBeInTheDocument();
   });
 
@@ -63,6 +69,7 @@ describe("portfolio app", () => {
     expect(screen.getByRole("heading", { name: "Google" })).toBeInTheDocument();
     expect(screen.getByAltText("Google logo")).toBeInTheDocument();
     expect(screen.getByAltText("Amazon Web Services logo")).toBeInTheDocument();
+    expect(screen.getByAltText("UBC Poker Club logo")).toBeInTheDocument();
     expect(screen.queryByText(/Pulled from my current resume/i)).not.toBeInTheDocument();
     expect(screen.getByText(/DynamoDB's new LSM-tree storage engine/i)).toBeInTheDocument();
   });
@@ -97,6 +104,8 @@ describe("portfolio app", () => {
     expect(screen.getByRole("heading", { name: "More projects" })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: "AI Closet Planner" })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: "UBC Poker Club" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Vita" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Customer Service Chatbot" })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /Back to selected work/i })).toHaveAttribute(
       "href",
       "/#work",

@@ -236,6 +236,143 @@ export const portfolio = {
         lines: ["events", "registration", "gallery", "contact"],
       },
     },
+    {
+      id: "vita",
+      name: "Vita",
+      eyebrow: "Health hackathon",
+      summary:
+        "Mobile patient-monitoring app for senior-home residents, with Firebase-backed patient data, a Python asyncio simulator, and a heart-attack detection model feeding alert flows.",
+      impact: [
+        "Simulated concurrent ECG and location streams before pushing patient updates to Firestore",
+        "Used realtime database updates to connect backend patient state to the mobile app",
+        "Tied model output into caregiver alert and emergency-contact workflows",
+      ],
+      stack: ["TypeScript", "Python", "Firebase", "Firestore", "asyncio", "ML"],
+      links: [
+        {
+          label: "Repository",
+          href: "https://github.com/jaydenpiao/Vita",
+        },
+      ],
+      visual: {
+        label: "patient monitor",
+        lines: ["ECG stream", "patient simulator", "Firestore sync", "mobile alert"],
+      },
+    },
+    {
+      id: "recipe-meal-planner",
+      name: "Recipe Meal Planner",
+      eyebrow: "Database app",
+      summary:
+        "Meal-planning and recipe app built around a MySQL relational schema, seed data, and a full local dev workflow for a CPSC 304 database project.",
+      impact: [
+        "Modeled recipe, meal, and planning data in SQL instead of keeping state only in the UI",
+        "Runs the backend and frontend together from a single development command",
+        "Documents local MySQL setup, schema loading, and app startup for repeatable handoff",
+      ],
+      stack: ["TypeScript", "MySQL", "SQL", "Node", "Vite"],
+      links: [
+        {
+          label: "Repository",
+          href: "https://github.com/jaydenpiao/recipe-meal-planner",
+        },
+      ],
+      visual: {
+        label: "meal data model",
+        lines: ["recipes", "ingredients", "meal plan", "SQL query"],
+      },
+    },
+    {
+      id: "customer-service-chatbot",
+      name: "Customer Service Chatbot",
+      eyebrow: "LLM workflow",
+      summary:
+        "Python chatbot workspace for ecommerce support, covering FAQ data cleaning, JSONL conversion, OpenAI file upload, fine-tuning, and appointment-booking test flows.",
+      impact: [
+        "Built scripts for one-shot, continuous, and trained-model chatbot runs",
+        "Added preprocessing utilities for raw FAQ data and JSONL fine-tuning inputs",
+        "Documented escalation, CRM integration, evaluation, and human-handoff considerations",
+      ],
+      stack: ["Python", "OpenAI API", "Fine-tuning", "JSONL", "Data cleaning"],
+      links: [
+        {
+          label: "Repository",
+          href: "https://github.com/jaydenpiao/customer-service-chatbot",
+        },
+      ],
+      visual: {
+        label: "support loop",
+        lines: ["FAQ data", "JSONL", "fine-tune", "chat flow", "handoff notes"],
+      },
+    },
+    {
+      id: "u4ea-labels",
+      name: "U4EA Labels",
+      eyebrow: "Music analysis",
+      summary:
+        "Music-analysis app that scores songs by sentiment and frequency categories, then presents the result as nutrition-label-style artwork.",
+      impact: [
+        "Built a React and Tailwind interface around track scoring and label generation",
+        "Used sentiment analysis to map songs into emotional and frequency-based categories",
+        "Connected a small Express path for app data flow during the prototype",
+      ],
+      stack: ["React", "Tailwind CSS", "Express", "Sentiment", "JavaScript"],
+      links: [
+        {
+          label: "Repository",
+          href: "https://github.com/jaydenpiao/tailwind-u4ea",
+        },
+      ],
+      visual: {
+        label: "track label",
+        lines: ["lyrics", "sentiment", "frequency score", "nutrition label"],
+      },
+    },
+    {
+      id: "asl-translator",
+      name: "ASL Translator",
+      eyebrow: "Hackathon ML",
+      summary:
+        "NwHacks web prototype that translates American Sign Language gestures into English with a TensorFlow model and browser-facing UI.",
+      impact: [
+        "Used a TensorFlow model as the core translation path",
+        "Built a lightweight HTML and JavaScript interface for the hackathon demo",
+      ],
+      stack: ["TensorFlow", "JavaScript", "HTML", "CSS"],
+      links: [
+        {
+          label: "Repository",
+          href: "https://github.com/jaydenpiao/NWHacks",
+        },
+      ],
+      visual: {
+        label: "gesture pipeline",
+        lines: ["camera input", "model pass", "ASL class", "English output"],
+      },
+    },
+    {
+      id: "chatgpt-clone",
+      name: "ChatGPT Clone",
+      eyebrow: "Full-stack chat app",
+      summary:
+        "TypeScript chat application with a Vite/React frontend, Express backend, MongoDB persistence, JWT auth, and OpenAI-powered chat routes.",
+      impact: [
+        "Split frontend and backend into separate TypeScript apps with build scripts",
+        "Used Express, MongoDB, JWT, and validation middleware for the server path",
+        "Built the UI with React, MUI, routing, toast feedback, and API calls",
+      ],
+      stack: ["TypeScript", "React", "Vite", "Express", "MongoDB", "OpenAI"],
+      links: [
+        {
+          label: "Repository",
+          href: "https://github.com/jaydenpiao/chatgpt_clone",
+        },
+      ],
+      visual: {
+        label: "chat stack",
+        lines: ["React UI", "auth token", "Express API", "MongoDB", "OpenAI call"],
+      },
+    },
   ] satisfies Project[],
   experience: [
     {
@@ -299,6 +436,22 @@ export const portfolio = {
         "Designed and implemented evaluation frameworks for text and voice AI agents using observability and automation principles.",
         "Integrated RESTful tools and visualization features that surfaced performance regressions and reduced manual testing by hours per engineer.",
         "Developed scalable systems using Docker, FastAPI, and AWS ECS for team-wide agent adoption and iterative ML workflows.",
+      ],
+    },
+    {
+      company: "UBC Poker Club",
+      role: "Web Developer",
+      location: "Vancouver, BC",
+      dates: "2023 - 2024",
+      logo: {
+        src: "/logos/ubc-poker.png",
+        alt: "UBC Poker Club logo",
+      },
+      summary:
+        "Built and maintained the club's public website for events, registration, media, and sponsor-facing content.",
+      bullets: [
+        "Shipped the React and Tailwind CSS site behind ubcpokerclub.com with event, gallery, contact, and registration surfaces.",
+        "Maintained public-facing content and deployment flow for a 150+ player UBC club community.",
       ],
     },
     {
