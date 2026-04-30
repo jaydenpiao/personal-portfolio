@@ -16,7 +16,8 @@ describe("portfolio app", () => {
         level: 1,
       }),
     ).toBeInTheDocument();
-    expect(screen.getByText(/reliable software across backend systems/i)).toBeInTheDocument();
+    expect(screen.getByText(/fourth-year Computer Science student at UBC/i)).toBeInTheDocument();
+    expect(screen.getByText(/DynamoDB storage infrastructure/i)).toBeInTheDocument();
 
     const featured = screen.getByLabelText("Featured projects");
     expect(within(featured).getByRole("heading", { name: "Quorum" })).toBeInTheDocument();

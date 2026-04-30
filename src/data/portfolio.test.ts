@@ -4,9 +4,10 @@ import { portfolio } from "./portfolio";
 describe("portfolio content", () => {
   it("positions Jayden around current engineering work instead of stale class-year copy", () => {
     expect(portfolio.hero.title).toMatch(/Jayden Piao/);
-    expect(portfolio.hero.summary).toMatch(/reliable software/i);
-    expect(portfolio.hero.summary).toMatch(/developer tools/i);
-    expect(portfolio.hero.summary).toMatch(/easy to maintain/i);
+    expect(portfolio.hero.summary).toMatch(/fourth-year Computer Science student at UBC/i);
+    expect(portfolio.hero.summary).toMatch(/distributed systems/i);
+    expect(portfolio.hero.summary).toMatch(/DynamoDB storage infrastructure/i);
+    expect(portfolio.hero.summary).toMatch(/LLM and voice-agent tooling/i);
     expect(portfolio.hero.location).toBe("UBC Computer Science - Class of 2026");
     expect(portfolio.hero.availability).toMatch(/Backend, infrastructure, and product/i);
     expect(portfolio.hero.summary).not.toMatch(/third year|junior at UBC/i);
