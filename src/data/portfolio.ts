@@ -87,7 +87,7 @@ export const portfolio = {
     },
     {
       label: "Interests",
-      value: "Backend systems, infrastructure work, developer tools, and practical web apps",
+      value: "Distributed systems, backend infrastructure, storage engines, reliability work, and developer tooling",
     },
   ],
   projects: [

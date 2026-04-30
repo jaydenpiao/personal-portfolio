@@ -81,6 +81,8 @@ describe("portfolio content", () => {
     ]);
     expect(portfolio.status.map((item) => item.value).join(" ")).toMatch(/DynamoDB storage/i);
     expect(portfolio.status.map((item) => item.value).join(" ")).toMatch(/voice-agent tooling/i);
+    expect(portfolio.status.map((item) => item.value).join(" ")).toMatch(/Distributed systems/i);
+    expect(portfolio.status.map((item) => item.value).join(" ")).toMatch(/storage engines/i);
     expect(portfolio.status.map((item) => item.value).join(" ")).not.toMatch(
       /production-grade demos|strongest signal/i,
     );
