@@ -559,7 +559,7 @@ export const portfolio = {
       location: "Vancouver, BC",
       dates: "2023 - 2024",
       logo: {
-        src: "/logos/ubc-poker.png",
+        src: "/logos/ubc-poker.svg",
         alt: "UBC Poker Club logo",
       },
       summary:

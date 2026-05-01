@@ -81,13 +81,13 @@ describe("portfolio content", () => {
       "/logos/aws.png",
       "/logos/ubc-mint.jpg",
       "/logos/marr-labs.jpg",
-      "/logos/ubc-poker.png",
+      "/logos/ubc-poker.svg",
       "/logos/the-verse.jpg",
       "/logos/ubc-thunderbots.jpg",
     ];
 
     for (const item of portfolio.experience) {
-      expect(item.logo.src).toMatch(/^\/logos\/.+\.(png|jpg)$/);
+      expect(item.logo.src).toMatch(/^\/logos\/.+\.(png|jpg|svg)$/);
       expect(item.logo.alt).toMatch(new RegExp(item.company.split(" ")[0], "i"));
     }
 
