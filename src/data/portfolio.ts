@@ -282,7 +282,7 @@ export const portfolio = {
     {
       id: "ubc-poker",
       name: "UBC Poker Club",
-      eyebrow: "Production club site",
+      eyebrow: "Club website",
       summary:
         "Responsive club website for event registration, club information, inquiries, and tournament media for a 150+ player community.",
       impact: [
@@ -291,10 +291,6 @@ export const portfolio = {
       ],
       stack: ["React", "JavaScript", "Tailwind CSS"],
       links: [
-        {
-          label: "Website",
-          href: "https://ubcpokerclub.com/",
-        },
         {
           label: "Repository",
           href: "https://github.com/jaydenpiao/ubc-poker",
@@ -563,9 +559,9 @@ export const portfolio = {
         alt: "UBC Poker Club logo",
       },
       summary:
-        "Built and maintained the club's public website for events, registration, media, and sponsor-facing content.",
+        "Built and maintained the club's website for events, registration, media, and sponsor-facing content.",
       bullets: [
-        "Shipped the React and Tailwind CSS site behind ubcpokerclub.com with event, gallery, contact, and registration surfaces.",
+        "Shipped the React and Tailwind CSS site with event, gallery, contact, and registration surfaces.",
         "Maintained public-facing content and deployment flow for a 150+ player UBC club community.",
       ],
     },

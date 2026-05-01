@@ -56,12 +56,15 @@ describe("portfolio content", () => {
 
   it("keeps project descriptions specific and technical", () => {
     const quorum = portfolio.projects.find((project) => project.id === "quorum");
+    const ubcPoker = portfolio.projects.find((project) => project.id === "ubc-poker");
 
     expect(quorum?.summary).toMatch(/policy-gated/i);
     expect(quorum?.summary).toMatch(/event log/i);
     expect(quorum?.links.some((link) => link.href.includes("github.com/jaydenpiao/quorum"))).toBe(
       true,
     );
+    expect(ubcPoker?.links.map((link) => link.label)).toEqual(["Repository"]);
+    expect(JSON.stringify(ubcPoker)).not.toMatch(/ubcpokerclub\.com/i);
   });
 
   it("keeps experience aligned with the latest resume", () => {
@@ -93,8 +96,11 @@ describe("portfolio content", () => {
 
     expect(portfolio.experience.map((item) => item.logo.src)).toEqual(expectedLogoSources);
     expect(portfolio.experience.find((item) => item.company === "UBC Poker Club")?.summary).toMatch(
-      /public website/i,
+      /club's website/i,
     );
+    expect(
+      portfolio.experience.find((item) => item.company === "UBC Poker Club")?.bullets.join(" "),
+    ).not.toMatch(/ubcpokerclub\.com/i);
   });
 
   it("keeps status cards grounded in concrete work", () => {
