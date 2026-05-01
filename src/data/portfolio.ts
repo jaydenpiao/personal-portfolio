@@ -63,8 +63,8 @@ export const portfolio = {
     dates: "Class of 2026",
     location: "Vancouver, BC",
     logo: {
-      src: "/logos/ubc-monogram.svg",
-      alt: "UBC education monogram",
+      src: "/logos/ubc-logo.jpg",
+      alt: "University of British Columbia logo",
     },
     summary:
       "Fourth-year Computer Science student focused on backend systems, infrastructure, and product engineering.",

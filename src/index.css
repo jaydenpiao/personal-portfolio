@@ -318,7 +318,7 @@ h3 {
 
 .education-card {
   display: grid;
-  grid-template-columns: minmax(190px, 0.34fr) minmax(0, 1fr);
+  grid-template-columns: minmax(390px, 0.46fr) minmax(0, 1fr);
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -333,15 +333,20 @@ h3 {
   min-height: 230px;
   padding: 30px;
   background:
-    linear-gradient(145deg, rgb(0 33 69 / 96%), rgb(0 109 119 / 88%)),
+    linear-gradient(145deg, rgb(0 33 69 / 98%), rgb(0 68 110 / 92%)),
     #002145;
 }
 
 .education-logo-panel img {
   display: block;
-  width: min(150px, 70%);
+  width: min(380px, 92%);
   height: auto;
-  filter: drop-shadow(0 18px 24px rgb(0 0 0 / 22%));
+  padding: 16px 18px;
+  border: 1px solid rgb(255 255 255 / 74%);
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 22px 48px rgb(0 0 0 / 22%);
+  object-fit: contain;
 }
 
 .education-content {
@@ -865,7 +870,8 @@ h3 {
   }
 
   .education-logo-panel img {
-    width: 112px;
+    width: min(320px, 88%);
+    padding: 18px;
   }
 
   .timeline-item {

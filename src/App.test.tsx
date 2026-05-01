@@ -53,7 +53,7 @@ describe("portfolio app", () => {
     expect(educationHeading.compareDocumentPosition(experienceHeading)).toBe(
       Node.DOCUMENT_POSITION_FOLLOWING,
     );
-    expect(screen.getByAltText("UBC education monogram")).toBeInTheDocument();
+    expect(screen.getByAltText("University of British Columbia logo")).toBeInTheDocument();
     expect(
       screen.getByRole("heading", { name: "University of British Columbia" }),
     ).toBeInTheDocument();

@@ -15,7 +15,8 @@ describe("portfolio content", () => {
     expect(portfolio.education.school).toBe("University of British Columbia");
     expect(portfolio.education.program).toBe("Computer Science");
     expect(portfolio.education.dates).toBe("Class of 2026");
-    expect(portfolio.education.logo.src).toBe("/logos/ubc-monogram.svg");
+    expect(portfolio.education.logo.src).toBe("/logos/ubc-logo.jpg");
+    expect(portfolio.education.logo.alt).toBe("University of British Columbia logo");
     expect(portfolio.education.focus).toEqual([
       "Distributed systems",
       "Systems programming",
