@@ -49,14 +49,18 @@ describe("portfolio content", () => {
         "asl-translator",
         "chatgpt-clone",
         "atm-machine",
+        "kings-craft",
       ]),
     );
-    expect(portfolio.projects.length).toBeGreaterThanOrEqual(17);
+    expect(portfolio.projects.length).toBeGreaterThanOrEqual(18);
   });
 
   it("keeps project descriptions specific and technical", () => {
     const quorum = portfolio.projects.find((project) => project.id === "quorum");
     const ubcPoker = portfolio.projects.find((project) => project.id === "ubc-poker");
+    const vita = portfolio.projects.find((project) => project.id === "vita");
+    const phonetic = portfolio.projects.find((project) => project.id === "phonetic-ai");
+    const kingsCraft = portfolio.projects.find((project) => project.id === "kings-craft");
 
     expect(quorum?.summary).toMatch(/policy-gated/i);
     expect(quorum?.summary).toMatch(/event log/i);
@@ -65,6 +69,18 @@ describe("portfolio content", () => {
     );
     expect(ubcPoker?.links.map((link) => link.label)).toEqual(["Repository"]);
     expect(JSON.stringify(ubcPoker)).not.toMatch(/ubcpokerclub\.com/i);
+    expect(vita?.eyebrow).toBe("nwHacks 2024");
+    expect(vita?.links.some((link) => link.href === "https://devpost.com/software/vita-paxt8v")).toBe(
+      true,
+    );
+    expect(phonetic?.eyebrow).toBe("nwHacks 2025");
+    expect(
+      phonetic?.links.some((link) => link.href === "https://devpost.com/software/phoneticai"),
+    ).toBe(true);
+    expect(kingsCraft?.eyebrow).toBe("StormHacks 2024 runner-up");
+    expect(
+      kingsCraft?.links.some((link) => link.href === "https://devpost.com/software/kings-craft"),
+    ).toBe(true);
   });
 
   it("keeps experience aligned with the latest resume", () => {

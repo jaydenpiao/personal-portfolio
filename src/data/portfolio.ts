@@ -259,9 +259,9 @@ export const portfolio = {
     {
       id: "phonetic-ai",
       name: "PhoneticAI",
-      eyebrow: "Voice-agent CRM",
+      eyebrow: "nwHacks 2025",
       summary:
-        "NwHacks voice-agent CRM prototype with a React dashboard, FastAPI backend, MySQL data model, Retell phone-call webhooks, and OpenAI transcript parsing for call summaries and events.",
+        "nwHacks 2025 voice-agent CRM prototype with a React dashboard, FastAPI backend, MySQL data model, Retell phone-call webhooks, and OpenAI transcript parsing for call summaries and events.",
       impact: [
         "Pulled agents, contacts, calls, events, and statistics into a dashboard UI",
         "Parsed call transcripts into sentiment, summaries, and calendar event objects",
@@ -272,6 +272,10 @@ export const portfolio = {
         {
           label: "Repository",
           href: "https://github.com/jaydenpiao/PhoneticAI",
+        },
+        {
+          label: "Devpost",
+          href: "https://devpost.com/software/phoneticai",
         },
       ],
       visual: {
@@ -304,9 +308,9 @@ export const portfolio = {
     {
       id: "vita",
       name: "Vita",
-      eyebrow: "Health hackathon",
+      eyebrow: "nwHacks 2024",
       summary:
-        "Mobile patient-monitoring app for senior-home residents, with Firebase-backed patient data, a Python asyncio simulator, and a heart-attack detection model feeding alert flows.",
+        "nwHacks 2024 mobile patient-monitoring app for senior-home residents, with Firebase-backed patient data, a Python asyncio simulator, and a heart-attack detection model feeding alert flows.",
       impact: [
         "Simulated concurrent ECG and location streams before pushing patient updates to Firestore",
         "Used realtime database updates to connect backend patient state to the mobile app",
@@ -318,10 +322,41 @@ export const portfolio = {
           label: "Repository",
           href: "https://github.com/jaydenpiao/Vita",
         },
+        {
+          label: "Devpost",
+          href: "https://devpost.com/software/vita-paxt8v",
+        },
       ],
       visual: {
         label: "patient monitor",
         lines: ["ECG stream", "patient simulator", "Firestore sync", "mobile alert"],
+      },
+    },
+    {
+      id: "kings-craft",
+      name: "King's Craft",
+      eyebrow: "StormHacks 2024 runner-up",
+      summary:
+        "Hackathon project that converts a single object photo into a 3D-printable .obj flow with web/mobile frontends, Flask services, AI reconstruction, S3 storage, and Firebase auth.",
+      impact: [
+        "Converted object photos into background-removed, multi-view inputs for 3D reconstruction",
+        "Built React/Vite web and React Native mobile surfaces for capture, browsing, and model viewing",
+        "Integrated AWS S3 and Firebase Google sign-in around generated assets",
+      ],
+      stack: ["React", "React Native", "Flask", "Python", "AWS S3", "Firebase", "AI"],
+      links: [
+        {
+          label: "Repository",
+          href: "https://github.com/koh3n/KINGSCRAFT",
+        },
+        {
+          label: "Devpost",
+          href: "https://devpost.com/software/kings-craft",
+        },
+      ],
+      visual: {
+        label: "image to 3D",
+        lines: ["photo", "background cutout", "multi-view", ".obj export"],
       },
     },
     {

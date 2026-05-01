@@ -117,6 +117,19 @@ describe("portfolio app", () => {
     expect(screen.getByRole("heading", { name: "PhoneticAI" })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: "UBC Poker Club" })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: "Vita" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "King's Craft" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /open Vita devpost/i })).toHaveAttribute(
+      "href",
+      "https://devpost.com/software/vita-paxt8v",
+    );
+    expect(screen.getByRole("link", { name: /open King's Craft devpost/i })).toHaveAttribute(
+      "href",
+      "https://devpost.com/software/kings-craft",
+    );
+    expect(screen.getByRole("link", { name: /open PhoneticAI devpost/i })).toHaveAttribute(
+      "href",
+      "https://devpost.com/software/phoneticai",
+    );
     expect(screen.getByRole("heading", { name: "Customer Service Chatbot" })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: "Album Nutrition" })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: "ATM Machine" })).toBeInTheDocument();
