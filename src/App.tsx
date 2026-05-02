@@ -305,19 +305,19 @@ function ExperienceSection() {
 }
 
 function SkillsSection() {
-  const coreTools = ["TypeScript", "React", "Python", "Go", "Rust", "AWS"];
+  const coreTools = ["Python", "Rust", "Go", "TypeScript", "SQL", "AWS"];
 
   return (
     <section id="skills" className="section-frame section-block tools-section">
       <SectionHeading
         eyebrow="Tools"
-        title="Tools I use most"
+        title="Stack I work in"
       />
       <div className="tools-layout">
         <aside className="tools-callout" aria-label="Core tools">
-          <span>Day to day</span>
+          <span>Core stack</span>
           <h3>{coreTools.join(", ")}</h3>
-          <p>Enough range to move between UI, backend, infra, and systems work without turning the page into a keyword dump.</p>
+          <p>Most of my work sits in backend and infrastructure-heavy product code: storage paths, agent tooling, dashboards, and systems that need logs, tests, and rollback.</p>
         </aside>
 
         <div className="skill-grid">

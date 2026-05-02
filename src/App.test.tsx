@@ -99,9 +99,13 @@ describe("portfolio app", () => {
   it("renders a practical tools section", () => {
     render(<App />);
 
-    expect(screen.getByRole("heading", { name: /Tools I use most/i })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: "Product UI" })).toBeInTheDocument();
-    expect(screen.getByText(/TypeScript, React, Python, Go, Rust, AWS/i)).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /Stack I work in/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Backend + infrastructure" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Systems + storage" })).toBeInTheDocument();
+    expect(screen.getByText(/Python, Rust, Go, TypeScript, SQL, AWS/i)).toBeInTheDocument();
+    expect(screen.getByText(/storage paths, agent tooling, dashboards/i)).toBeInTheDocument();
+    expect(screen.getAllByText("Multi-Paxos").length).toBeGreaterThanOrEqual(1);
+    expect(screen.getByText("TensorFlow")).toBeInTheDocument();
     expect(screen.getByText("Playwright")).toBeInTheDocument();
     expect(screen.queryByText(/Mostly TypeScript and React/i)).not.toBeInTheDocument();
   });

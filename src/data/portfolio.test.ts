@@ -131,11 +131,18 @@ describe("portfolio content", () => {
 
   it("keeps tools grouped around real workflows", () => {
     expect(portfolio.skillGroups.map((group) => group.name)).toEqual([
-      "Product UI",
-      "Backend systems",
-      "Cloud and data",
-      "Voice and LLMs",
-      "Shipping loop",
+      "Backend + infrastructure",
+      "Systems + storage",
+      "Product surfaces",
+      "AI + ML tooling",
+      "Shipping + observability",
+    ]);
+    expect(portfolio.skillGroups.map((group) => group.primary)).toEqual([
+      "Python / FastAPI / AWS",
+      "Rust / Go / C++",
+      "React / TypeScript",
+      "OpenAI / PyTorch / TensorFlow",
+      "Tests / logs / CI",
     ]);
 
     for (const group of portfolio.skillGroups) {
@@ -143,5 +150,11 @@ describe("portfolio content", () => {
       expect(group.summary.length).toBeGreaterThan(30);
       expect(group.skills.length).toBeGreaterThanOrEqual(6);
     }
+
+    expect(portfolio.skillGroups.map((group) => group.summary).join(" ")).toMatch(/DynamoDB/i);
+    expect(portfolio.skillGroups.map((group) => group.summary).join(" ")).toMatch(/Multi-Paxos/i);
+    expect(portfolio.skillGroups.flatMap((group) => group.skills)).toEqual(
+      expect.arrayContaining(["PyTorch", "TensorFlow", "AWS ECS", "WAL/Snapshots"]),
+    );
   });
 });
