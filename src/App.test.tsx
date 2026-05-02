@@ -35,6 +35,7 @@ describe("portfolio app", () => {
     });
 
     expect(quorumCodeLink).toHaveAttribute("href", "https://github.com/jaydenpiao/quorum");
+    expect(quorumCodeLink).not.toHaveAttribute("target");
     expect(quorumCodeLink).toHaveTextContent("Code");
     expect(within(featured).getByRole("link", { name: /open 3D-Viz-Tool demo/i })).toHaveTextContent(
       "Demo",
@@ -162,5 +163,24 @@ describe("portfolio app", () => {
     expect(screen.queryByText(/future agents/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/Agent-ready repo/i)).not.toBeInTheDocument();
     expect(screen.queryByRole("link", { name: /Back to top/i })).not.toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Email Jayden" })).toHaveAttribute(
+      "href",
+      "mailto:jaydenpiao@gmail.com",
+    );
+    expect(screen.getAllByRole("link", { name: "GitHub profile" })[0]).toHaveAttribute(
+      "href",
+      "https://github.com/jaydenpiao",
+    );
+    expect(screen.getAllByRole("link", { name: "LinkedIn profile" })[0]).toHaveAttribute(
+      "href",
+      "https://www.linkedin.com/in/jaydenpiao/",
+    );
+    expect(screen.getAllByRole("link", { name: "Open Jayden Piao resume" })[0]).toHaveAttribute(
+      "href",
+      "/jaydenpiao_resume.pdf",
+    );
+    expect(screen.getAllByRole("link").every((link) => link.getAttribute("target") === null)).toBe(
+      true,
+    );
   });
 });

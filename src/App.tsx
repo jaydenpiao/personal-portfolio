@@ -4,7 +4,7 @@ import {
   FileText,
   Mail,
 } from "lucide-react";
-import { useEffect, type ReactNode } from "react";
+import { useEffect, type MouseEvent, type ReactNode } from "react";
 import portraitUrl from "./assets/jayden-palms-portrait.jpg";
 import { portfolio, type ExternalLink, type Project } from "./data/portfolio";
 
@@ -117,7 +117,12 @@ function Hero() {
             ariaLabel="LinkedIn profile"
             logo={linkLogos.linkedin}
           />
-          <IconLink href={portfolio.links.resume} label="Resume" icon={<FileText />} />
+          <IconLink
+            href={portfolio.links.resume}
+            label="Resume"
+            ariaLabel="Open Jayden Piao resume"
+            icon={<FileText />}
+          />
         </div>
       </div>
 
@@ -371,6 +376,12 @@ function ContactSection() {
           ariaLabel="LinkedIn profile"
           logo={linkLogos.linkedin}
         />
+        <IconLink
+          href={portfolio.links.resume}
+          label="Resume"
+          ariaLabel="Open Jayden Piao resume"
+          icon={<FileText />}
+        />
       </div>
     </section>
   );
@@ -410,15 +421,29 @@ function IconLink({
     alt: string;
   };
 }) {
-  const external = href.startsWith("http");
+  const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    if (
+      href.startsWith("mailto:") ||
+      event.defaultPrevented ||
+      event.button !== 0 ||
+      event.metaKey ||
+      event.ctrlKey ||
+      event.shiftKey ||
+      event.altKey
+    ) {
+      return;
+    }
+
+    event.preventDefault();
+    window.location.assign(href);
+  };
 
   return (
     <a
       className="icon-link"
       href={href}
-      target={external ? "_blank" : undefined}
-      rel={external ? "noreferrer" : undefined}
       aria-label={ariaLabel}
+      onClick={handleClick}
     >
       <span className="icon-link-label">{label}</span>
       <span
