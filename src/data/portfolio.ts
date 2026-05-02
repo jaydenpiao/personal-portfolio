@@ -68,7 +68,7 @@ export const portfolio = {
     },
     summary:
       "Fourth-year Computer Science student focused on backend systems, infrastructure, and product engineering.",
-    focus: ["Distributed systems", "Systems programming", "AI/LLM tooling", "Product engineering"],
+    focus: ["GPA 3.7"],
   } satisfies Education,
   links: {
     github: "https://github.com/jaydenpiao",
