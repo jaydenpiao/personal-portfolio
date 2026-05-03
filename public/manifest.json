@@ -1,6 +1,6 @@
 {
   "short_name": "Jayden Piao",
-  "name": "Jayden Piao - Software Engineer",
+  "name": "Jayden Piao | Software Engineer",
   "icons": [
     {
       "src": "jp.png",
@@ -8,9 +8,11 @@
       "type": "image/png"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "theme_color": "#0f172a",
   "background_color": "#f6f7fb",
-  "description": "Portfolio for Jayden Piao, focused on AI systems, developer tools, distributed systems, and product web apps."
+  "description": "Portfolio for Jayden Piao, a UBC Computer Science student and software engineer focused on backend systems, infrastructure, distributed systems, developer tools, and product web apps.",
+  "categories": ["portfolio", "developer", "software"]
 }
