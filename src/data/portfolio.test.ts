@@ -1,0 +1,160 @@
+import { describe, expect, it } from "vitest";
+import { portfolio } from "./portfolio";
+
+describe("portfolio content", () => {
+  it("positions Jayden around current engineering work instead of stale class-year copy", () => {
+    expect(portfolio.hero.title).toMatch(/Jayden Piao/);
+    expect(portfolio.hero.summary).toMatch(/fourth-year Computer Science student at UBC/i);
+    expect(portfolio.hero.summary).toMatch(/distributed systems/i);
+    expect(portfolio.hero.summary).toMatch(/DynamoDB storage infrastructure/i);
+    expect(portfolio.hero.summary).toMatch(/LLM and voice-agent tooling/i);
+    expect(portfolio.hero.summary).not.toMatch(/third year|junior at UBC/i);
+  });
+
+  it("keeps education separate from the hero portrait card", () => {
+    expect(portfolio.education.school).toBe("University of British Columbia");
+    expect(portfolio.education.program).toBe("Computer Science");
+    expect(portfolio.education.dates).toBe("Class of 2026");
+    expect(portfolio.education.logo.src).toBe("/logos/ubc-logo.jpg");
+    expect(portfolio.education.logo.alt).toBe("University of British Columbia logo");
+    expect(portfolio.education.focus).toEqual(["GPA 3.9/4.33"]);
+  });
+
+  it("features the strongest recent public engineering projects first", () => {
+    expect(portfolio.projects.map((project) => project.id).slice(0, 5)).toEqual([
+      "quorum",
+      "quorum-coordination-service",
+      "3d-viz-tool",
+      "hey-spotify",
+      "ai-closet-planner",
+    ]);
+  });
+
+  it("includes a deeper set of public GitHub projects on the projects page", () => {
+    expect(portfolio.projects.map((project) => project.id)).toEqual(
+      expect.arrayContaining([
+        "vita",
+        "parameter-golf",
+        "macro-place-challenge",
+        "phonetic-ai",
+        "recipe-meal-planner",
+        "customer-service-chatbot",
+        "u4ea-labels",
+        "album-nutrition",
+        "asl-translator",
+        "chatgpt-clone",
+        "atm-machine",
+        "kings-craft",
+      ]),
+    );
+    expect(portfolio.projects.length).toBeGreaterThanOrEqual(18);
+  });
+
+  it("keeps project descriptions specific and technical", () => {
+    const quorum = portfolio.projects.find((project) => project.id === "quorum");
+    const ubcPoker = portfolio.projects.find((project) => project.id === "ubc-poker");
+    const vita = portfolio.projects.find((project) => project.id === "vita");
+    const phonetic = portfolio.projects.find((project) => project.id === "phonetic-ai");
+    const kingsCraft = portfolio.projects.find((project) => project.id === "kings-craft");
+
+    expect(quorum?.summary).toMatch(/policy-gated/i);
+    expect(quorum?.summary).toMatch(/event log/i);
+    expect(quorum?.links.some((link) => link.href.includes("github.com/jaydenpiao/quorum"))).toBe(
+      true,
+    );
+    expect(ubcPoker?.links.map((link) => link.label)).toEqual(["Repository"]);
+    expect(JSON.stringify(ubcPoker)).not.toMatch(/ubcpokerclub\.com/i);
+    expect(vita?.eyebrow).toBe("nwHacks 2024");
+    expect(vita?.links.some((link) => link.href === "https://devpost.com/software/vita-paxt8v")).toBe(
+      true,
+    );
+    expect(phonetic?.eyebrow).toBe("nwHacks 2025");
+    expect(
+      phonetic?.links.some((link) => link.href === "https://devpost.com/software/phoneticai"),
+    ).toBe(true);
+    expect(kingsCraft?.eyebrow).toBe("StormHacks 2024 runner-up");
+    expect(
+      kingsCraft?.links.some((link) => link.href === "https://devpost.com/software/kings-craft"),
+    ).toBe(true);
+  });
+
+  it("keeps experience aligned with the latest resume", () => {
+    expect(portfolio.links.resume).toBe("/jaydenpiao_resume.pdf");
+    expect(portfolio.experience.map((item) => item.company).slice(0, 3)).toEqual([
+      "Google",
+      "Amazon Web Services (AWS)",
+      "UBC MINT",
+    ]);
+    expect(portfolio.experience[0]?.role).toMatch(/Incoming Software Engineer Intern/i);
+    expect(portfolio.experience[1]?.bullets.join(" ")).toMatch(/DynamoDB/i);
+  });
+
+  it("provides a local logo asset for every experience entry", () => {
+    const expectedLogoSources = [
+      "/logos/google.png",
+      "/logos/aws.png",
+      "/logos/ubc-mint.jpg",
+      "/logos/marr-labs.jpg",
+      "/logos/ubc-poker.svg",
+      "/logos/the-verse.jpg",
+      "/logos/ubc-thunderbots.jpg",
+    ];
+
+    for (const item of portfolio.experience) {
+      expect(item.logo.src).toMatch(/^\/logos\/.+\.(png|jpg|svg)$/);
+      expect(item.logo.alt).toMatch(new RegExp(item.company.split(" ")[0], "i"));
+    }
+
+    expect(portfolio.experience.map((item) => item.logo.src)).toEqual(expectedLogoSources);
+    expect(portfolio.experience.find((item) => item.company === "UBC Poker Club")?.summary).toMatch(
+      /club's website/i,
+    );
+    expect(
+      portfolio.experience.find((item) => item.company === "UBC Poker Club")?.bullets.join(" "),
+    ).not.toMatch(/ubcpokerclub\.com/i);
+  });
+
+  it("keeps status cards grounded in concrete work", () => {
+    expect(portfolio.status.map((item) => item.label)).toEqual([
+      "Recent work",
+      "Main stack",
+      "Interests",
+    ]);
+    expect(portfolio.status.map((item) => item.value).join(" ")).toMatch(/DynamoDB storage/i);
+    expect(portfolio.status.map((item) => item.value).join(" ")).toMatch(/voice-agent tooling/i);
+    expect(portfolio.status.map((item) => item.value).join(" ")).toMatch(/Distributed systems/i);
+    expect(portfolio.status.map((item) => item.value).join(" ")).toMatch(/storage engines/i);
+    expect(portfolio.status.map((item) => item.value).join(" ")).not.toMatch(
+      /production-grade demos|strongest signal/i,
+    );
+  });
+
+  it("keeps tools grouped around real workflows", () => {
+    expect(portfolio.skillGroups.map((group) => group.name)).toEqual([
+      "Backend + infrastructure",
+      "Systems + storage",
+      "Product surfaces",
+      "AI + ML tooling",
+      "Shipping + observability",
+    ]);
+    expect(portfolio.skillGroups.map((group) => group.primary)).toEqual([
+      "Python / FastAPI / AWS",
+      "Rust / Go / C++",
+      "React / TypeScript",
+      "OpenAI / PyTorch / TensorFlow",
+      "Tests / logs / CI",
+    ]);
+
+    for (const group of portfolio.skillGroups) {
+      expect(group.primary).toBeTruthy();
+      expect(group.summary.length).toBeGreaterThan(30);
+      expect(group.skills.length).toBeGreaterThanOrEqual(6);
+    }
+
+    expect(portfolio.skillGroups.map((group) => group.summary).join(" ")).toMatch(/DynamoDB/i);
+    expect(portfolio.skillGroups.map((group) => group.summary).join(" ")).toMatch(/Multi-Paxos/i);
+    expect(portfolio.skillGroups.flatMap((group) => group.skills)).toEqual(
+      expect.arrayContaining(["PyTorch", "TensorFlow", "AWS ECS", "WAL/Snapshots"]),
+    );
+  });
+});

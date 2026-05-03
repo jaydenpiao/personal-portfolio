@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">UBC Poker Club logo</title>
+  <desc id="desc">Original compact UBC Poker Club badge with cards, chip colors, and bold UBC lettering.</desc>
+  <defs>
+    <linearGradient id="badge" x1="80" y1="58" x2="438" y2="456" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#081936"/>
+      <stop offset="0.58" stop-color="#0a3f4a"/>
+      <stop offset="1" stop-color="#12351f"/>
+    </linearGradient>
+    <linearGradient id="red" x1="110" y1="92" x2="390" y2="430" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ff5b48"/>
+      <stop offset="1" stop-color="#a40f2d"/>
+    </linearGradient>
+    <filter id="lift" x="-16%" y="-16%" width="132%" height="132%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#020617" flood-opacity="0.34"/>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" rx="112" fill="url(#badge)"/>
+  <path d="M47 375c75-41 132-55 205-48 73 6 132-10 213-57v109c-67 39-139 55-215 49-78-7-131 9-203 50z" fill="#f6c15b" opacity="0.18"/>
+
+  <g transform="rotate(-12 176 196)" filter="url(#lift)">
+    <rect x="84" y="74" width="170" height="226" rx="28" fill="#fffaf0"/>
+    <rect x="84" y="74" width="170" height="226" rx="28" fill="none" stroke="#d8dee9" stroke-width="8"/>
+    <path d="M142 146c0-29 50-29 50 0 0 17-16 26-25 36-10-10-25-19-25-36z" fill="#b11232"/>
+    <path d="M166 176l-23 44h47z" fill="#b11232"/>
+  </g>
+
+  <g transform="rotate(12 340 196)" filter="url(#lift)">
+    <rect x="258" y="74" width="170" height="226" rx="28" fill="#ffffff"/>
+    <rect x="258" y="74" width="170" height="226" rx="28" fill="none" stroke="#d8dee9" stroke-width="8"/>
+    <circle cx="343" cy="148" r="24" fill="#071a33"/>
+    <circle cx="316" cy="178" r="24" fill="#071a33"/>
+    <circle cx="370" cy="178" r="24" fill="#071a33"/>
+    <path d="M343 194l-27 58h54z" fill="#071a33"/>
+  </g>
+
+  <g filter="url(#lift)">
+    <circle cx="256" cy="306" r="145" fill="url(#red)"/>
+    <g fill="#fff7e8">
+      <rect x="238" y="160" width="36" height="72" rx="12"/>
+      <rect x="238" y="380" width="36" height="72" rx="12"/>
+      <rect x="330" y="190" width="36" height="72" rx="12" transform="rotate(45 348 226)"/>
+      <rect x="146" y="326" width="36" height="72" rx="12" transform="rotate(45 164 362)"/>
+      <rect x="330" y="326" width="36" height="72" rx="12" transform="rotate(135 348 362)"/>
+      <rect x="146" y="190" width="36" height="72" rx="12" transform="rotate(135 164 226)"/>
+    </g>
+    <circle cx="256" cy="306" r="92" fill="#071a33" stroke="#fff7e8" stroke-width="12"/>
+  </g>
+
+  <g filter="url(#lift)">
+    <rect x="83" y="204" width="346" height="148" rx="46" fill="#fffaf0" stroke="#f6c15b" stroke-width="10"/>
+    <text x="256" y="298" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="94" font-weight="900" letter-spacing="5" fill="#071a33">UBC</text>
+  </g>
+</svg>
