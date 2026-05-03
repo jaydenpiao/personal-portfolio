@@ -17,7 +17,7 @@ describe("portfolio content", () => {
     expect(portfolio.education.dates).toBe("Class of 2026");
     expect(portfolio.education.logo.src).toBe("/logos/ubc-logo.jpg");
     expect(portfolio.education.logo.alt).toBe("University of British Columbia logo");
-    expect(portfolio.education.focus).toEqual(["GPA 3.7"]);
+    expect(portfolio.education.focus).toEqual(["GPA 3.9/4.33"]);
   });
 
   it("features the strongest recent public engineering projects first", () => {
