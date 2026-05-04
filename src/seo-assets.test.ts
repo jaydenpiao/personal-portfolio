@@ -28,6 +28,9 @@ describe("SEO assets", () => {
     expect(html).toContain('name="author" content="Jayden Piao"');
     expect(html).toContain('name="robots" content="index, follow, max-image-preview:large"');
     expect(html).toContain(
+      'name="google-site-verification" content="FMkG11vxG_zvfYrWk-9Lp4eS6vpH7sKVd7ytHq8Yxy4"',
+    );
+    expect(html).toContain(
       'content="Jayden Piao is a UBC Computer Science student and software engineer',
     );
     expect(html).toContain('property="og:title" content="Jayden Piao | Software Engineer"');
@@ -94,5 +97,11 @@ describe("SEO assets", () => {
     expect(manifest.start_url).toBe("/");
     expect(manifest.scope).toBe("/");
     expect(manifest.description).toMatch(/Jayden Piao/);
+  });
+
+  it("keeps the Google Search Console HTML verification file at the site root", () => {
+    expect(readProjectFile("public/google531624ac1898cb08.html")).toBe(
+      "google-site-verification: google531624ac1898cb08.html\n",
+    );
   });
 });
