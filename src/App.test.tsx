@@ -1,4 +1,4 @@
-import { render, screen, within } from "@testing-library/react";
+import { fireEvent, render, screen, within } from "@testing-library/react";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import App from "./App";
 
@@ -41,6 +41,35 @@ describe("portfolio app", () => {
       "Demo",
     );
     expect(within(featured).queryByRole("heading", { name: "ATM" })).not.toBeInTheDocument();
+  });
+
+  it("uses an accessible mobile navigation drawer instead of a wrapped link row", () => {
+    render(<App />);
+
+    const menuButton = screen.getByRole("button", { name: "Open navigation menu" });
+
+    expect(menuButton).toHaveAttribute("aria-expanded", "false");
+    expect(screen.queryByRole("navigation", { name: "Mobile navigation" })).not.toBeInTheDocument();
+
+    fireEvent.click(menuButton);
+
+    expect(menuButton).toHaveAttribute("aria-expanded", "true");
+    expect(screen.getByRole("button", { name: "Close navigation menu" })).toBeInTheDocument();
+
+    const mobileNavigation = screen.getByRole("navigation", { name: "Mobile navigation" });
+    expect(within(mobileNavigation).getByRole("link", { name: "Education" })).toHaveAttribute(
+      "href",
+      "/#education",
+    );
+    expect(within(mobileNavigation).getByRole("link", { name: "Projects" })).toHaveAttribute(
+      "href",
+      "/projects",
+    );
+
+    fireEvent.keyDown(window, { key: "Escape" });
+
+    expect(menuButton).toHaveAttribute("aria-expanded", "false");
+    expect(menuButton).toHaveFocus();
   });
 
   it("renders education as its own section instead of a portrait caption", () => {
