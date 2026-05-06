@@ -3,8 +3,10 @@ import {
   CheckCircle2,
   FileText,
   Mail,
+  Menu,
+  X,
 } from "lucide-react";
-import { useEffect, type MouseEvent, type ReactNode } from "react";
+import { useEffect, useRef, useState, type MouseEvent, type ReactNode } from "react";
 import portraitUrl from "./assets/jayden-palms-portrait.jpg";
 import { portfolio, type ExternalLink, type Project } from "./data/portfolio";
 
@@ -81,8 +83,50 @@ function HomePage() {
 }
 
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement | null>(null);
+
+  useEffect(() => {
+    if (!isMenuOpen) {
+      return;
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== "Escape") {
+        return;
+      }
+
+      setIsMenuOpen(false);
+      menuButtonRef.current?.focus();
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isMenuOpen]);
+
+  useEffect(() => {
+    if (typeof window.matchMedia !== "function") {
+      return;
+    }
+
+    const desktopQuery = window.matchMedia("(min-width: 761px)");
+    const closeOnDesktop = () => {
+      if (desktopQuery.matches) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    closeOnDesktop();
+    desktopQuery.addEventListener("change", closeOnDesktop);
+
+    return () => desktopQuery.removeEventListener("change", closeOnDesktop);
+  }, []);
+
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
-    <header className="site-header">
+    <header className={`site-header${isMenuOpen ? " menu-open" : ""}`}>
       <a className="brand" href="/" aria-label="Jayden Piao home">
         JP
       </a>
@@ -93,6 +137,39 @@ function Header() {
           </a>
         ))}
       </nav>
+      <button
+        ref={menuButtonRef}
+        className="menu-toggle"
+        type="button"
+        aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+        aria-controls="mobile-navigation"
+        aria-expanded={isMenuOpen}
+        onClick={() => setIsMenuOpen((current) => !current)}
+      >
+        {isMenuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
+      </button>
+      <div
+        className={`mobile-nav-shell${isMenuOpen ? " is-open" : ""}`}
+        aria-hidden={!isMenuOpen}
+      >
+        <div
+          className="mobile-nav-backdrop"
+          aria-hidden="true"
+          onClick={closeMenu}
+        />
+        <nav id="mobile-navigation" className="mobile-nav-panel" aria-label="Mobile navigation">
+          {navigation.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              tabIndex={isMenuOpen ? 0 : -1}
+              onClick={closeMenu}
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+      </div>
     </header>
   );
 }
